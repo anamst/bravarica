@@ -28,7 +28,10 @@ const Form = () => {
     fetch("/", {
      method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
       })
         .then(() => navigate("/thank-you/"))
         .catch((error) => alert(error));
@@ -63,7 +66,7 @@ const Form = () => {
           onSubmit={handleSubmit}
           method="post"
           data-netlify="true"
-          name="form-contact"
+          name="form-name"
           target="_blank"
            className="mt-6">
             <div className="mb-2">
