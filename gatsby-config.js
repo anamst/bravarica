@@ -8,6 +8,7 @@
         siteUrl: `https://www.yourdomain.tld`,
     },
     plugins: [
+        "gatsby-plugin-netlify",
         'gatsby-plugin-postcss',
         {
             resolve: `gatsby-plugin-google-fonts`,
