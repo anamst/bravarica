@@ -4,6 +4,8 @@ import Button from "./button.js"
 import debela from '../images/debela.png'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from 'gatsby';
+import { navigate } from 'gatsby-link'
+
 
 
 const Form = () => {
@@ -26,16 +28,12 @@ const Form = () => {
     const formData = new FormData(myForm);
 
     fetch("/", {
-     method: "POST",
+      method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-      })
-        .then(() => navigate("/thank-you/"))
-        .catch((error) => alert(error));
-
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
     if (!name || !email || !date || !time || !people || !mobile ) {
       alert('Please fill in all required fields');
       return;
@@ -72,7 +70,6 @@ const Form = () => {
             <div className="mb-2">
               <label> {t("form_imeprezime")}
                 <input
-                  type="hidden"
                   name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -85,7 +82,6 @@ const Form = () => {
               <label>{t("form_email")}
                 <input
                   name="email"
-                  type="hidden"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
@@ -98,7 +94,6 @@ const Form = () => {
               <label> {t("form_date")}
                 <input
                   name="date"
-                  type="hidden"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
                   className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
@@ -110,7 +105,6 @@ const Form = () => {
               <label> {t("form_time")}
                 <input
                   name="time"
-                  type="hidden"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
                   className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
@@ -124,7 +118,6 @@ const Form = () => {
               <label> {t("form_nr")}
                 <input
                   name="people"
-                  type="hidden"
                   value={people}
                   onChange={(e) => setPeople(e.target.value)}
                   className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
@@ -136,7 +129,6 @@ const Form = () => {
               <label> {t("form_mobile")}
                 <input
                   name="mobile"
-                  type="hidden"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
                   className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
@@ -149,7 +141,6 @@ const Form = () => {
               <label>
                 <textarea
                   name="message"
-                  type="hidden"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="block w-full mt-2 px-16 py-8 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
