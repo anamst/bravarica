@@ -5,7 +5,6 @@ import debela from '../images/debela.png'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from 'gatsby';
 
-const FORM_ENPOINT = "";
 
 const Form = () => {
   const { t } = useTranslation();
@@ -49,7 +48,6 @@ const Form = () => {
         </h1>
         <img src={debela} className="w-80 pb-8 mx-auto" />
           <form
-          action={FORM_ENPOINT}
           onSubmit={handleSubmit}
           method="post"
           data-netlify="true"
