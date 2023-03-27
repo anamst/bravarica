@@ -1,0 +1,21 @@
+{
+    "starter": "Appetizers",
+    "s1": "Platter 'Bravarica'",
+    "s2": "Platter 'Mixed'",
+    "s3": "Carpaccio 'Fish'",
+    "s4": "Carpaccio 'Meat'",
+    "s5": "Omelette 'Octopus'",
+    "s6": "Omelette 'Asparagus'",
+    "main": "Main dishes",
+    "m1": "Fish stew with polenta (scorpionfish, angler)",
+    "m2": "Buzzara fish stew (shrimps, clams, garlic, onion)",
+    "m3": "Cooked fish (angler, shrimp)",
+    "bbq": "Grilled",
+    "b1": "Sea Bream",
+    "b2": "Sea Bass",
+    "b3": "Lamb",
+    "b4": "Rump Steak",
+    "b5": "Pork chop black Slavonian pig",
+    "desert": "Dessert",
+    "d1": "Fig cake"
+}

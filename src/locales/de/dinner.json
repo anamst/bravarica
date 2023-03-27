@@ -1,0 +1,21 @@
+{
+    "starter": "Vorspeisen",
+    "s1": "Platte 'Bravarica'",
+    "s2": "Platte 'Gemischte",
+    "s3": "Carpaccio 'Fisch'",
+    "s4": "Carpaccio 'Fleisch'",
+    "s5": "Omelett 'Oktopus'",
+    "s6": "Omelett 'Spargel'",
+    "main": "Hauptgerichte",
+    "m1": "Fischeintopf mit Polenta (Skorpionfisch, Angler)",
+    "m2": "Buzzara Fischeintopf (Garnelen, Muscheln, Knoblauch, Zwiebel)",
+    "m3": "Fischeintopf (Angler, Garnelen)",
+    "bbq": "Gegrillt",
+    "b1": "Goldbrasse",
+    "b2": "Seebarsch",
+    "b3": "Lamm",
+    "b4": "Rumpsteak",
+    "b5": "Schweinekotelett vom schwarzen Slawonischen Schwein",
+    "desert": "Dessert",
+    "d1": "Feigenkuchen"
+}
