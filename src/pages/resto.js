@@ -25,7 +25,7 @@ const RestoPage = () => {
                 <div className="flex flex-col justify-around items-start lg:pr-32">
 
                     <h1 className="text-4xl uppercase font-naslovi text-center pt-20">
-                        <Trans i18nKey="title1">restoran</Trans>
+                        <Trans i18nKey="title">restoran</Trans>
                     </h1>
                     <img src={debela} className="w-80 pb-8" />
                     <p className="text-xl pt-10">
