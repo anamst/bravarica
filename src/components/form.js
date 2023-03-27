@@ -26,7 +26,7 @@ const Form = () => {
 
     const myForm = e.target;
     const formData = new FormData(myForm);
-
+console.log("sss");
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -39,14 +39,11 @@ const Form = () => {
       return;
     }
     
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100 );
   };
 
   if (submitted) {
     return (
-      <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
+      <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
         <h1 className="text-3xl text-center uppercase">
          <Trans i18nKey="form_success">Hvala Vam na povjerenju. Javit ćemo Vam se uskoro s potvrdom.</Trans> 
         </h1>
@@ -64,9 +61,11 @@ const Form = () => {
           onSubmit={handleSubmit}
           method="post"
           data-netlify="true"
-          name="form-name"
+          name="forma"
           target="_blank"
            className="mt-6">
+          <input type="hidden" name="form-name" value="pizzaOrder" />
+
             <div className="mb-2">
               <label> {t("form_imeprezime")}
                 <input
@@ -149,7 +148,7 @@ const Form = () => {
               </label>
             </div>
   
-            <div class="mb-6 grid grid-cols-1 place-content-center">
+            <div className="mb-6 grid grid-cols-1 place-content-center">
               <Button type="submit" className="mx-auto"><Trans i18nKey="form_rezervirajte">rezervirajte</Trans></Button>
             </div>
            
