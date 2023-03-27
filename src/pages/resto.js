@@ -112,7 +112,7 @@ export default RestoPage
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(
-      filter: { ns: { in: ["index"] }, language: { eq: $language } }
+      filter: { ns: { in: ["resto", "common"] }, language: { eq: $language } }
     ) {
       edges {
         node {

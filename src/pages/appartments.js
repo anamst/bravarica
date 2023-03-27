@@ -53,7 +53,7 @@ const AppartmentPage = () => {
             <Card className='shadow-sm shadow-headline w-1/3'>
                 <img src={app1}></img>
                 <div className="flex flex-col items-center justify-around">
-                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appart">apartman 1</Trans></h1>
+                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment1">apartman 1</Trans></h1>
                    <a href="https://www.booking.com/hotel/hr/bravarica-apartments.hr.html" target="_blank"><Button><Trans i18nKey="reservation">rezerviraj</Trans></Button></a> 
                 </div>
             </Card>
@@ -61,7 +61,7 @@ const AppartmentPage = () => {
             <Card className='shadow-sm shadow-headline w-1/3'>
                 <img src={app2}></img>
                 <div className="flex flex-col items-center justify-around">
-                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appart">apartman 2</Trans></h1>
+                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment2">apartman 2</Trans></h1>
                     <a href="https://www.booking.com/hotel/hr/bravarica-apartments.hr.html" target="_blank"><Button><Trans i18nKey="reservation">rezerviraj</Trans></Button></a> 
                 </div>
             </Card>
@@ -73,14 +73,14 @@ const AppartmentPage = () => {
             <Card className='shadow-sm shadow-headline w-3/4 pb-6'>
                 <img src={app1}></img>
                 <div className="flex flex-col items-center justify-around">
-                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appart">apartman 1</Trans></h1>
+                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment1">apartman 1</Trans></h1>
                     <a href="https://www.booking.com/hotel/hr/bravarica-apartments.hr.html" target="_blank"><Button><Trans i18nKey="reservation">rezerviraj</Trans></Button></a> 
                 </div>
             </Card>
             <Card className='shadow-sm shadow-headline w-3/4 mt-6'>
                 <img src={app2}></img>
                 <div className="flex flex-col items-center justify-around">
-                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appart">apartman 2</Trans></h1>
+                    <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment2">apartman 2</Trans></h1>
                     <a href="https://www.booking.com/hotel/hr/bravarica-apartments.hr.html" target="_blank"><Button><Trans i18nKey="reservation">rezerviraj</Trans></Button></a> 
                 </div>
             </Card>
@@ -96,7 +96,7 @@ export default AppartmentPage
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(
-      filter: { ns: { in: ["index"] }, language: { eq: $language } }
+      filter: { ns: { in: ["appartments", "common"] }, language: { eq: $language } }
     ) {
       edges {
         node {

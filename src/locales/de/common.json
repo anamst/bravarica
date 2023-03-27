@@ -4,5 +4,14 @@
     "header_app": "APARTMENTS",
     "header_about": "ÜBER UNS",
     "footer_hours": "ÖFFNUNGSZEITEN:",
-    "footer_hrs": "Täglich von 14:00 bis 22:00 Uhr"
+    "footer_hrs": "Täglich von 14:00 bis 22:00 Uhr",
+    "form_title": "Kontaktieren Sie uns",
+    "form_imeprezime": "Name und Nachname",
+    "form_date": "Datum",
+    "form_e-mail": "E-mail",
+    "form_time": "Uhrzeit",
+    "form_nr": "Anzahl der personen",
+    "form_mobile": "Handy",
+    "form_rezervirajte": "Jetzt buchen",
+    "form_success": "Vielen Dank für Ihr Vertrauen. Wir werden uns bald mit einer Bestätigung bei Ihnen melden."
 }

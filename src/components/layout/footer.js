@@ -3,6 +3,8 @@ import facebook from '../../images/facebook.png'
 import instagram from '../../images/instagram.png'
 import mail from '../../images/mail.png'
 import maps from '../../images/maps.png'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
+import { graphql } from 'gatsby';
 
 
 const Footer = () => {
@@ -10,7 +12,7 @@ const Footer = () => {
         <main className='font-tekst'>
             <div className='w-screen bg-header-light pt-4 px-20 flex flex-col md:flex-row border-bottom justify-between items-center font-text'>
                 <div className='flex flex-col md:flex-row justify-around items-start'>
-                <p className='text-base text-left text-blue-dark pt-3'><span className='font-bold uppercase font-naslovi'>radno vrijeme: </span><br />Svakog dana 14:00-22:00</p>
+                <p className='text-base text-left text-blue-dark pt-3'><span className='font-bold uppercase font-naslovi'><Trans i18nKey="footer_hours">radno vrijeme: </Trans></span><br /><Trans i18nKey="footer_hrs">Svakog dana 14:00-22:00</Trans></p>
                     <div className='md:px-32 flex flex-col'>
                     <p className='text-base text-blue-dark py-3'>Šonjevi stani 31a, 53291 Novalja</p>
                     <a href='tel:+385 53 881 430' className='text-base font-naslovi text-blue-dark pb-3'>+385 53 881 430</a>
@@ -38,3 +40,19 @@ const Footer = () => {
 }
 
 export default Footer
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: { ns: { in: ["common"] }, language: { eq: $language } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

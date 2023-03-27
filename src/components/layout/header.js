@@ -1,10 +1,13 @@
 import * as React from 'react'
 import {useState} from 'react'
-import {Link} from 'gatsby'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
+import { graphql } from 'gatsby';
+import {Link, useI18next} from 'gatsby-plugin-react-i18next';
 import logo from '../../images/logo.png'
 
 
 const Header = () => {
+    const {languages, originalPath, i18n} = useI18next();
     const [isExpanded, toggleExpansion] = useState(false)
   return (
     <nav className="flex fixed z-10 top-0 w-full items-center justify-between flex-wrap bg-header-light px-10 xl:px-32 py-4 font-naslovi">
@@ -27,23 +30,36 @@ const Header = () => {
           <Link to={`/`} className="block uppercase text-xl mt-6 md:inline-block md:mt-0 text-normal transition-all duration-500 md:mr-4 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-normal
                 before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
                 before:transition before:ease-in-out before:duration-300">
-            Naslovnica
+                  <Trans i18nKey="header_home">
+            Naslovnica </Trans>
           </Link>
           <Link to={`/resto`} className="block uppercase text-xl mt-4 md:inline-block md:mt-0 text-normal transition-all duration-500 md:mr-4 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-normal
                 before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
                 before:transition before:ease-in-out before:duration-300">
-            Restoran
+                  <Trans i18nKey="header_resto">
+            Restoran</Trans>
           </Link>
           <Link to={`/appartments`} className="block uppercase text-xl mt-4 md:inline-block md:mt-0 text-normal transition-all duration-500 md:mr-4 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-normal
                 before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
                 before:transition before:ease-in-out before:duration-300">
-            Apartmani
+                  <Trans i18nKey="header_app">
+            Apartmani</Trans>
           </Link>
           <Link to={`/about`} className="block uppercase text-xl mt-4 md:inline-block md:mt-0 text-normal transition-all duration-500 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-normal
                 before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
                 before:transition before:ease-in-out before:duration-300">
-            O nama
+                  <Trans i18nKey="header_about">
+            O nama</Trans>
           </Link>
+          <ul className="md:pl-4 pt-12 md:pt-0 inline uppercase ">
+        {languages.map((lng) => (
+          <li className='inline pr-2' key={lng}>
+            <Link to={originalPath} language={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }}>
+              {lng}
+            </Link>
+          </li>
+        ))}
+      </ul>
         </div>
       </div>
     </nav>
@@ -53,3 +69,18 @@ const Header = () => {
 
 export default Header
 
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: { ns: { in: ["common"] }, language: { eq: $language } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

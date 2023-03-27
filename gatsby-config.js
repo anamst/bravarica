@@ -1,7 +1,6 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
- import { languages, defaultLanguage } from './src/locales/languages.js';
  module.exports = {
     siteMetadata: {
         title: `OPG-Bravarica`,
@@ -30,12 +29,13 @@
           {
             resolve: 'gatsby-plugin-react-i18next',
             options: {
-              languages,
-              defaultLanguage,
-              siteUrl,
+              localeJsonSourceName: `locale`,
+              languages: [`hr`, `en`, `de`, `it`],
+              defaultLanguage: `hr`,
+              siteUrl: `http://localhost:8000/`,
               i18nextOptions: {
-                fallbackLng: defaultLanguage,
-                supportedLngs: languages,
+                fallbackLng: `hr`,
+                supportedLngs: [`hr`, `en`, `de`, `it`],
                 defaultNS: 'common',
                 interpolation: {
                   escapeValue: false, 

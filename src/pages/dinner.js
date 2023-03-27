@@ -29,77 +29,96 @@ const Dinner = () => {
 
                 <div className="pt-24">
                 <h1 className="text-3xl text-left text-strong uppercase font-naslovi">
-                    Predjela
+                <Trans i18nKey="starter">
+                    Predjela</Trans>
                 </h1>
                 <img src={debela} className="w-80" />
                 <div className="flex flex-col lg:flex-row flex-wrap justify-between items-center">
                 <Card className='text-center shadow-none lg:w-1/2'> 
-                <p className="text-2xl pt-4">Plata "Bravarica"</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="s1">
+                  Plata "Bravarica"</Trans></p>
                 <img src={bravplata} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Plata "Miješana"</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="s2">Plata "Miješana"</Trans></p>
                 <img src={mijesanaplata} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Carpaccio "Riba"</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="s3">Carpaccio "Riba"</Trans></p>
                 <img src={carpaccioriba} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Carpaccio "Meso"</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="s4">Carpaccio "Meso"</Trans></p>
                 <img src={carpacciomeso} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Omlet "Hobotnica"</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="s5">Omlet "Hobotnica"</Trans></p>
                 <img src={omlethobotnica} className="rounded" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Omlet "Šparoge"</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="s6">Omlet "Šparoge"</Trans></p>
                 <img src={omletsparoge} className="rounded p-4" />
                 </Card>
                 </div>
                 
                 <h1 className="text-3xl text-left text-strong uppercase font-naslovi pt-32">
-                    Jela na žlicu
+                <Trans i18nKey="main">
+                    Jela na žlicu</Trans>
                 </h1>
                 <img src={debela} className="w-80" />
-                <p className="text-xl pt-4">Brodit s palentom (škarpina, grdobina)</p>
-                <p className="text-xl pt-4">Buzara (kozice, školjke, cešnjak, luk)</p>
-                <p className="text-xl pt-4">Lešada (grdobina, kozice)</p>
+                <p className="text-xl pt-4">
+                <Trans i18nKey="m1">Brodit s palentom (škarpina, grdobina)</Trans></p>
+                <p className="text-xl pt-4">
+                  <Trans i18nKey="m2">Buzara (kozice, školjke, cešnjak, luk)</Trans></p>
+                <p className="text-xl pt-4">
+                  <Trans i18nKey="m3">Lešada (grdobina, kozice)</Trans></p>
                 <h1 className="text-3xl text-left text-strong uppercase font-naslovi pt-32">
-                    Roštilj
+                  <Trans i18nKey="bbq">
+                    Roštilj</Trans>
                 </h1>
                 <img src={debela} className="w-80" />
                 <div className="flex flex-col lg:flex-row flex-wrap justify-between items-center">
                 <Card className='text-center shadow-none lg:w-1/2'> 
-                <p className="text-2xl pt-4">Orada</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="b1">Orada</Trans></p>
                 <img src={orada} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Brancin</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="b2">Brancin</Trans></p>
                 <img src={brancin} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Janjetina</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="b3">Janjetina</Trans></p>
                 <img src={janjetina} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Rumpsteak</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="b4">Rumpsteak</Trans></p>
                 <img src={ramstek} className="" />
                 </Card>
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl p-4">Svinjski kotlet od crne slavonske svinje</p>
+                <p className="text-2xl p-4">
+                <Trans i18nKey="b5">Svinjski kotlet od crne slavonske svinje</Trans></p>
                 <img src={oinklogo} className="border-2 inline" />
                 </Card>
                 </div>
                 
                 <h1 className="text-3xl text-left text-strong uppercase font-naslovi pt-32">
-                    Desert
+                <Trans i18nKey="des"> Desert</Trans> 
                 </h1>
                 <img src={debela} className="w-80" />
                 <div className="flex flex-col lg:flex-row flex-wrap justify-between items-center">
                 <Card className='text-center shadow-none lg:w-1/2'>
-                <p className="text-2xl pt-4">Smokvenjak"</p>
+                <p className="text-2xl pt-4">
+                <Trans i18nKey="d1">Smokvenjak"</Trans></p>
                 <img src={smokvenjak} className="" />
                 </Card>
                 </div>
@@ -115,7 +134,7 @@ export default Dinner
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(
-      filter: { ns: { in: ["index"] }, language: { eq: $language } }
+      filter: { ns: { in: ["dinner", "common"] }, language: { eq: $language } }
     ) {
       edges {
         node {

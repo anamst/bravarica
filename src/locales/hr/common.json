@@ -4,5 +4,14 @@
     "header_app": "apartmani",
     "header_about": "o nama",
     "footer_hours": "radno vrijeme",
-    "footer_hrs": "Svakog dana 14:00-22:00"
+    "footer_hrs": "Svakog dana 14:00-22:00",
+    "form_title": "Kontaktirajte nas",
+    "form_imeprezime": "Ime i prezime",
+    "form_date": "Datum",
+    "form_e-mail": "E-mail",
+    "form_time": "Vrijeme",
+    "form_nr": "Broj osoba",
+    "form_mobile": "Mobitel",
+    "form_rezervirajte": "Rezervirajte",
+    "form_success": "Hvala Vam na povjerenju. Javit ćemo Vam se uskoro s potvrdom."
 }

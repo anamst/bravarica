@@ -4,5 +4,14 @@
     "header_app": "APPARTAMENTI",
     "header_about": "CHI SIAMO",
     "footer_hours": "ORARIO DI APERTURA:",
-    "footer_hrs": "Tutti i giorni dalle 14:00 alle 22:00"
+    "footer_hrs": "Tutti i giorni dalle 14:00 alle 22:00",
+    "form_title": "Contattaci",
+    "form_e-mail": "E-mail",
+    "form_imeprezime": "Nome e cognome",
+    "form_date": "Data",
+    "form_time": "Ora",
+    "form_nr": "Numero di persone",
+    "form_mobile": "Cellulare",
+    "form_rezervirajte": "Prenota ora",
+    "form_success": "Grazie per la vostra fiducia. Vi contatteremo al più presto con una conferma."
 }
