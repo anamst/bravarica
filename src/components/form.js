@@ -21,6 +21,18 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+     method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => navigate("/thank-you/"))
+        .catch((error) => alert(error));
+
     if (!name || !email || !date || !time || !people || !mobile ) {
       alert('Please fill in all required fields');
       return;
@@ -51,6 +63,7 @@ const Form = () => {
           onSubmit={handleSubmit}
           method="post"
           data-netlify="true"
+          name="form-contact"
           target="_blank"
            className="mt-6">
             <div className="mb-2">
