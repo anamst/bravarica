@@ -19,6 +19,7 @@ const Form = () => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
+  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -30,7 +31,7 @@ const Form = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
       })
-      .then(() => navigate("/thank-you/"))
+      .then(() => navigate("/resto/"))
       .catch((error) => alert(error));
       
       if (!name || !email || !date || !time || !people || !mobile ) {
@@ -40,7 +41,15 @@ const Form = () => {
     
   };
 
-
+  if (submitted) {
+    return (
+      <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+        <h1 className="text-3xl text-center uppercase">
+         <Trans i18nKey="form_success">Hvala Vam na povjerenju. Javit ćemo Vam se uskoro s potvrdom.</Trans> 
+        </h1>
+      </div>
+    );
+  }
     return (
       <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
         <div className="w-full p-6 m-auto bg-light lg:max-w-xl">
