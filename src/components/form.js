@@ -19,7 +19,6 @@ const Form = () => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
-  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -41,15 +40,7 @@ const Form = () => {
     
   };
 
-  if (submitted) {
-    return (
-      <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-        <h1 className="text-3xl text-center uppercase">
-         <Trans i18nKey="form_success">Hvala Vam na povjerenju. Javit ćemo Vam se uskoro s potvrdom.</Trans> 
-        </h1>
-      </div>
-    );
-  }
+
     return (
       <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
         <div className="w-full p-6 m-auto bg-light lg:max-w-xl">
@@ -59,6 +50,7 @@ const Form = () => {
         <img src={debela} className="w-80 pb-8 mx-auto" />
           <form
           onSubmit={handleSubmit}
+          method="post"
           data-netlify="true"
           name="forma"
           target="_blank"
@@ -148,7 +140,9 @@ const Form = () => {
             </div>
   
             <div className="mb-6 grid grid-cols-1 place-content-center">
-              <Button type="submit" className="mx-auto"><Trans i18nKey="form_rezervirajte">rezervirajte</Trans></Button>
+              <button type="submit" className="mx-auto bg-cover pt-10 pb-6 pr-12 pl-6 bg-no-repeat bg-[url('../images/btnbg.png')]
+           transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-headlines
+          text-gray uppercase text-lg font-naslovi"><Trans i18nKey="form_rezervirajte">rezervirajte</Trans></button>
             </div>
            
           </form>
