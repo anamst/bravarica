@@ -47,7 +47,7 @@ const Header = () => {
           </Link>
           <Link to={`/about`} className="block uppercase text-xl mt-4 md:inline-block md:mt-0 text-normal transition-all duration-500 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-normal
                 before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
-                before:transition before:ease-in-out before:duration-300">
+                before:transition before:ease-in-out before:duration-300 pb-8 md:pb-0">
                   <Trans i18nKey="header_about">
             O nama</Trans>
           </Link>
