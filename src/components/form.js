@@ -31,7 +31,7 @@ const Form = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
       })
-      .then(() => navigate("/resto/"))
+      .then(() => navigate(-1))
       .catch((error) => alert(error));
       
       if (!name || !email || !date || !time || !people || !mobile ) {
