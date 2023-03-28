@@ -27,7 +27,7 @@ const AboutPage = () => {
                     </span>
                     <span className="text-lg">
                         <Trans i18nKey="hrs">
-                        Svakog dana 14:00-22:00</Trans>
+                        Od Ponedjeljka do subote 14:00-22:00</Trans>
                     </span>
                 </div>
                 <div className="flex flex-row justify-between items-baseline pb-2">

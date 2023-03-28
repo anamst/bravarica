@@ -12,7 +12,7 @@ const Footer = () => {
         <main className='font-tekst'>
             <div className='w-screen bg-header-light pt-4 px-20 flex flex-col md:flex-row border-bottom justify-between items-center font-text'>
                 <div className='flex flex-col md:flex-row justify-around items-start'>
-                <p className='text-base text-left text-blue-dark pt-3'><span className='font-bold uppercase font-naslovi'><Trans i18nKey="footer_hours">radno vrijeme: </Trans></span><br /><Trans i18nKey="footer_hrs">Svakog dana 14:00-22:00</Trans></p>
+                <p className='text-base text-left text-blue-dark pt-3'><span className='font-bold uppercase font-naslovi'><Trans i18nKey="footer_hours">radno vrijeme: </Trans></span><br /><Trans i18nKey="footer_hrs">Od ponedjeljka do subote 14:00-22:00</Trans></p>
                     <div className='md:px-32 flex flex-col'>
                     <p className='text-base text-blue-dark py-3'>Šonjevi stani 31a, 53291 Novalja</p>
                     <a href='tel:+385 53 881 430' className='text-base font-naslovi text-blue-dark pb-3'>+385 53 881 430</a>
