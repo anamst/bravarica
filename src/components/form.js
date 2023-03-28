@@ -26,16 +26,16 @@ const Form = () => {
 
     const myForm = e.target;
     const formData = new FormData(myForm);
-console.log("sss");
-    fetch("/", {
+      fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
-    })
+      })
       .then(() => navigate("/thank-you/"))
       .catch((error) => alert(error));
-    if (!name || !email || !date || !time || !people || !mobile ) {
-      alert('Please fill in all required fields');
+      
+      if (!name || !email || !date || !time || !people || !mobile ) {
+        alert('Please fill in all required fields');
       return;
     }
     
@@ -59,12 +59,11 @@ console.log("sss");
         <img src={debela} className="w-80 pb-8 mx-auto" />
           <form
           onSubmit={handleSubmit}
-          method="post"
           data-netlify="true"
           name="forma"
           target="_blank"
            className="mt-6">
-          <input type="hidden" name="form-name" value="pizzaOrder" />
+          <input type="hidden" name="form-name" value="forma" />
 
             <div className="mb-2">
               <label> {t("form_imeprezime")}
