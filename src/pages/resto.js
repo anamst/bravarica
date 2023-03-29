@@ -112,7 +112,7 @@ const RestoPage = () => {
                 <p className="py-8 text-lg w-full text-left"><Trans i18nKey="textmenu">Pogledajte naš menu prije dolaska i upoznajte se s hranom koju pripremamo.</Trans></p>
 
             </div>
-            <Card className='flex flex-col items-center shadow-sm shadow-headline justify-around w-3/4 lg:w-1/2'>
+            <Card className='flex flex-col items-center shadow-sm shadow-headline justify-around w-3/4 lg:w-1/2 px-12'>
                 <img src={dinner} className='pb-6'></img>
                 <div className="flex flex-col items-center justify-around">
                     <Button className="pr-12"><Link to={`/dinner`}><Trans i18nKey="our">naš menu</Trans></Link></Button>

@@ -20,8 +20,8 @@ import Card from "../components/card.js"
 const Dinner = () => {
     return ( 
     <Layout> 
-        <section className="">
-            <div className="lg:px-32 pt-48 pb-20 relative">
+        <section className="px-2">
+            <div className="lg:px-32 pt-32 pb-20 relative">
                 <h1 className="text-4xl text-center text-strong uppercase font-naslovi">
                     Menu
                 </h1>
@@ -72,13 +72,13 @@ const Dinner = () => {
                     Jela na žlicu</Trans>
                 </h1>
                 <img src={debela} className="w-80" />
-                <p className="text-xl pt-4 pl-12 lg:pl-0">
+                <p className="text-xl pt-4 pl-8 lg:pl-0">
                 <Trans i18nKey="m1">Brodit s palentom (škarpina, grdobina)</Trans></p>
-                <p className="text-xl pt-4 pl-12 lg:pl-0">
+                <p className="text-xl pt-4 pl-8 lg:pl-0">
                   <Trans i18nKey="m2">Buzara (kozice, školjke, cešnjak, luk)</Trans></p>
-                <p className="text-xl pt-4 pl-12 lg:pl-0">
+                <p className="text-xl pt-4 pl-8 lg:pl-0">
                   <Trans i18nKey="m3">Lešada (grdobina, kozice)</Trans></p>
-                <h1 className="text-3xl pl-12 lg:pl-0 text-left text-strong uppercase font-naslovi pt-32">
+                <h1 className="text-3xl pl-8 lg:pl-0 text-left text-strong uppercase font-naslovi pt-32">
                   <Trans i18nKey="bbq">
                     Roštilj</Trans>
                 </h1>

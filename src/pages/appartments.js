@@ -76,7 +76,7 @@ const AppartmentPage = () => {
 
         <div className='hidden lg:flex lg:flex-row lg:justify-around lg:items-center'>
 
-            <Card className='shadow-sm shadow-headline w-1/3'>
+            <Card className='shadow-sm shadow-headline w-1/3 px-12'>
                 <img src={app1}></img>
                 <div className="flex flex-col items-center justify-around">
                     <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment1">apartman 1</Trans></h1>
@@ -84,7 +84,7 @@ const AppartmentPage = () => {
                 </div>
             </Card>
             
-            <Card className='shadow-sm shadow-headline w-1/3'>
+            <Card className='shadow-sm shadow-headline w-1/3 px-12'>
                 <img src={app2}></img>
                 <div className="flex flex-col items-center justify-around">
                     <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment2">apartman 2</Trans></h1>
@@ -93,14 +93,14 @@ const AppartmentPage = () => {
             </Card>
         </div>        
         <div className='flex flex-col justify-around items-center lg:hidden'>
-            <Card className='shadow-sm shadow-headline w-3/4 pb-6'>
+            <Card className='shadow-sm shadow-headline w-3/4 pb-6 px-12'>
                 <img src={app1}></img>
                 <div className="flex flex-col items-center justify-around">
                     <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment1">apartman 1</Trans></h1>
                     <a href="https://www.booking.com/hotel/hr/bravarica-apartments.hr.html" target="_blank"><Button><Trans i18nKey="reservation">rezerviraj</Trans></Button></a> 
                 </div>
             </Card>
-            <Card className='shadow-sm shadow-headline w-3/4 mt-6'>
+            <Card className='shadow-sm shadow-headline w-3/4 mt-6 px-12'>
                 <img src={app2}></img>
                 <div className="flex flex-col items-center justify-around">
                     <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment2">apartman 2</Trans></h1>
