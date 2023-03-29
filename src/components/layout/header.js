@@ -10,7 +10,7 @@ const Header = () => {
     const {languages, originalPath, i18n} = useI18next();
     const [isExpanded, toggleExpansion] = useState(false)
   return (
-    <nav className="flex fixed z-10 top-0 w-full items-center justify-between flex-wrap bg-header-light px-10 xl:px-32 py-4 font-naslovi">
+    <nav className="flex fixed z-10 top-0 w-full items-center justify-between flex-wrap bg-header-light px-10 lg:px-20 xl:px-32 py-4 font-naslovi">
       <Link to={`/`}><img src={logo} className="w-48" ></img></Link> 
       <div className="block md:hidden">
         <button onClick={() => toggleExpansion(!isExpanded)} className="text-normal">
@@ -47,19 +47,19 @@ const Header = () => {
           </Link>
           <Link to={`/about`} className="block uppercase text-xl mt-4 md:inline-block md:mt-0 text-normal transition-all duration-500 relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-normal
                 before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
-                before:transition before:ease-in-out before:duration-300 pb-8 md:pb-0">
+                before:transition before:ease-in-out before:duration-300 pb-0">
                   <Trans i18nKey="header_about">
             O nama</Trans>
           </Link>
           <ul className="md:pl-4 pt-12 md:pt-0 inline uppercase ">
-        {languages.map((lng) => (
-          <li className='inline pr-2' key={lng}>
-            <Link to={originalPath} language={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }}>
-              {lng}
-            </Link>
-          </li>
-        ))}
-      </ul>
+            {languages.map((lng) => (
+              <li className='inline pr-2 pt-8' key={lng}>
+               <Link to={originalPath} language={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }}>
+                {lng}
+              </Link>
+            </li>
+            ))}
+         </ul>
         </div>
       </div>
     </nav>

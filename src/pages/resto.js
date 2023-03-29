@@ -20,14 +20,14 @@ import debela from '../images/debela.png'
 const RestoPage = () => {
     return ( 
     <Layout> 
-        <section id="hero" className="px-10 lg:px-32 pt-32 md:pt-44 text-normal bg-light">
-            <div className="flex flex-col xl:flex-row justify-around items-end">
+        <section id="hero" className="px-10 lg:px-20 xl:px-32 pt-12 lg:pt-20 2xl:pt-52 text-normal bg-light relative">
+            <div className="flex flex-col xl:hidden justify-around items-end">
                 <div className="flex flex-col justify-around items-start lg:pr-32">
 
                     <h1 className="text-4xl uppercase font-naslovi text-center pt-20">
                         <Trans i18nKey="title">restoran</Trans>
                     </h1>
-                    <img src={debela} className="w-80 pb-8" />
+                    <img src={debela} className="w-80 pb-6" />
                     <p className="text-xl pt-10">
                         <Trans i18nKey="text1">
                     Terasa uz more u hladovini starih maslina s predivnim zalaskom sunca.</Trans></p>
@@ -43,15 +43,35 @@ const RestoPage = () => {
                     <img src={restoran} className="border border-blue-dark"></img>
                 </div>
             </div>
+        <div className="hidden xl:block relative pr-10">
+            <img src={restoran} className='border border-blue-dark w-1/2 fixed top-20 right-0'></img>
+
+                <div className="flex flex-col justify-around items-start lg:w-1/2 2xl:w-1/3 pr-2">
+                    <h1 className="text-4xl uppercase font-naslovi text-center pt-20">
+                        <Trans i18nKey="title">restoran</Trans>
+                    </h1>
+                    <img src={debela} className="w-80 pb-6" />
+                    <p className="text-xl pt-10">
+                        <Trans i18nKey="text1">
+                        Terasa uz more u hladovini starih maslina s predivnim zalaskom sunca.</Trans></p>
+                    <p className="text-xl ">
+                        <Trans i18nKey="text2">
+                            Ukusna domaća hrana za turiste željne autohtonih okusa hrvatskih specijaliteta.</Trans> </p>
+                    <p className="text-xl pb-10">
+                        <Trans i18nKey="text3">
+                        Dopustite da Vas očaramo svojim ugodnih ambijentom, veselim zdravicama a ponekad i pjesmom uvijek opuštenih gostiju koji se kod nas osjećaju kao kod kuće i uvijek se s razlogom vraćaju. <br></br>
+                        </Trans></p>
+                </div>
+            </div>
         </section>
-        <section className="px-10 md:px-32 pt-20 lg:pt-32 text-normal bg-light">
+        <section className="px-10 md:px-32 pt-12 text-normal bg-light relative">
             <div className="flex flex-col justify-around items-center">
                 <div>
-                <h1 className="text-4xl uppercase pt-24 font-naslovi"><Trans i18nKey="title2">preporuke</Trans></h1>
+                <h1 className="text-4xl uppercase pt-20 font-naslovi"><Trans i18nKey="title2">preporuke</Trans></h1>
                 <img src={debela} className="w-80 pb-12 mx-auto" />
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
-                    <div className="relative">
+                    <div className="lg:w-1/2">
                     <span className="text-xl font-naslovi text-headlines pt-4" ><Trans i18nKey="text11">Plata "Bravarica"</Trans></span>
                     <p className="text-base pb-4"><Trans i18nKey="text12">Paški sir, kozji sir, med od domaće kadulje, marmelada, rajčica, paprika, sezonsko voće, domaće maslinovo ulje</Trans></p>
                     </div>
@@ -80,16 +100,16 @@ const RestoPage = () => {
                 </div>
             </div>
         </section>
-        <section className="px-10 pt-20 lg:pt-32 md:px-32 pb-20 md:pb-32 text-normal bg-light">
+        <section className="px-2 pt-32 md:px-32 pb-20 md:pb-32 text-normal bg-light relative">
         <div className='flex flex-col lg:flex-row justify-around items-center pb-20'>
             
-            <div className="flex flex-col items-center justify-start px-20">
+            <div className="flex flex-col items-center justify-start px-10 md:px-0 xl:px-10">
                 <div>
                 <h1 className="text-center text-3xl uppercase font-naslovi">menu</h1>
                 <img src={debela} className="w-80 mx-auto" />
                 </div>
                 
-                <p className="py-8 text-lg text-left"><Trans i18nKey="textmenu">Pogledajte naš menu prije dolaska i upoznajte se s hranom koju pripremamo.</Trans></p>
+                <p className="py-8 text-lg w-full text-left"><Trans i18nKey="textmenu">Pogledajte naš menu prije dolaska i upoznajte se s hranom koju pripremamo.</Trans></p>
 
             </div>
             <Card className='flex flex-col items-center shadow-sm shadow-headline justify-around w-3/4 lg:w-1/2'>
@@ -100,7 +120,7 @@ const RestoPage = () => {
             </Card>
         </div>
     </section>
-    <section id='contact' className="px-10 md:px-32 pt-32 text-normal bg-light relative">
+    <section id='contact' className="px-10 md:px-32 text-normal bg-light relative">
         <Form></Form>
     </section>
     </Layout>

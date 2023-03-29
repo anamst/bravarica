@@ -23,18 +23,18 @@ const HomePage = () => {
     return ( 
     <Layout> 
     <Hero />
-    <section className="px-10 md:px-32 pt-32 text-normal">
-        <div className="flex flex-col lg:flex-row items-start justify-start py-4">
-            <div className="flex flex-col items-start justify-between pb-8">
+    <section className="px-10 md:px-20 pt-12 md:pt-32 text-normal">
+        <div className="flex flex-col xl:flex-row items-start justify-start py-4">
+            <div className="flex flex-col items-center md:items-start justify-between pb-8">
                 <h1 className="font-naslovi text-left text-3xl uppercase text-headlines"><Trans i18nKey="title">upoznajte nas</Trans></h1>
                 <img src={debela} className="w-80 pb-8" />
-                <p className="py-6 text-lg text-left w-3/4 lg:w-1/2"><Trans i18nKey="toptext">Ukusna domaća hrana za turiste željne autohtonih okusa hrvatskih specijaliteta.
+                <p className="w-full py-6 text-lg lext-center lg:text-left w-3/4 lg:w-1/2"><Trans i18nKey="toptext">Ukusna domaća hrana za turiste željne autohtonih okusa hrvatskih specijaliteta.
                     Dopustite da Vas očaramo svojim ugodnih ambijentom, veselim zdravicama a ponekad i pjesmom uvijek opuštenih gostiju koji se kod nas osjećaju kao kod kuće i uvijek se s razlogom vraćaju. Želimo ovu ljepotu i mir podijeliti s Vama i ponuditi Vam gostoprimstvo u našim apartmanima i restoranu. <br></br>
                     DOBRO DOŠLI!</Trans> 
                 </p>
                 <Button><Link to={`/resto/#contact`}><Trans i18nKey="reserve">rezerviraj</Trans></Link></Button>
             </div>
-            <div className="container grid grid-cols-2 gap-6">
+            <div className="container grid grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2  gap-6">
                 <div className="px-2">
                     <img src={kitchen1} className='border border-blue-dark'></img>
                 </div>
@@ -50,15 +50,15 @@ const HomePage = () => {
             </div>  
         </div>
     </section>
-    <section className="px-10 md:px-32 pt-20 md:pt-32 text-normal bg-light">
-        <div className="flex flex-col lg:flex-row items-start justify-start py-8">
+    <section className="px-2 md:px-32 pt-20 md:pt-32 text-normal bg-light">
+        <div className="flex flex-col lg:flex-row items-start justify-start pt-8">
             <div className="px-2">
                 <img src={resto1} className="hidden lg:block border border-blue-dark"></img>
             </div>
-            <div className="flex flex-col items-start justify-around px-8 pb-8">
+            <div className="flex flex-col items-center md:items-start justify-around px-8 pb-8">
                 <h1 className="text-left text-3xl uppercase font-naslovi"><Trans i18nKey="title2">Restoran</Trans></h1>
                 <img src={debela} className="w-80 pb-8" />
-                <p className="py-6 text-lg text-left w-3/4"><Trans i18nKey="textresto">Terasa uz more u hladovini starih maslina s predivnim zalaskom sunca. Ukusna domaća hrana: paški sir, janjetina, riba, domaći kruh...</Trans></p>
+                <p className="py-6 text-lg text-center w-full md:text-left md:w-3/4"><Trans i18nKey="textresto">Terasa uz more u hladovini starih maslina s predivnim zalaskom sunca. Ukusna domaća hrana: paški sir, janjetina, riba, domaći kruh...</Trans></p>
                 <Button className="p-12"><Link to={`/resto`}><Trans i18nKey="title2">restoran</Trans></Link></Button>
                 <div className="pt-12">
                     <img src={resto2} className="border border-blue-dark"></img>
@@ -66,7 +66,7 @@ const HomePage = () => {
             </div> 
         </div>
     </section>
-    <section className="px-10 md:px-32 pt-20 pb-20 md:pt-32 text-normal bg-light">
+    <section className="px-2 md:px-32 pt-20 pb-20 md:pt-32 text-normal bg-light">
         <div className='hidden md:flex md:flex-row md:justify-around md:items-center'>
             <Card className='w-1/2 shadow-sm shadow-headline'>
                 <img src={app1} className="border border-blue-dark"></img>

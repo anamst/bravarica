@@ -14,10 +14,10 @@ import debela from '../images/debela.png'
 const AppartmentPage = () => {
     return ( 
         <Layout> 
-        <section id="hero" className="px-10 md:px-32 pt-20 md:pt-44 text-normal bg-light">
-            <div className="flex flex-col lg:flex-row justify-around items-start xl:items-center">
+        <section id="hero" className="px-10 lg:px-20 xl:px-32  pt-20 md:pt-32 text-normal bg-light">
+            <div className="flex flex-col lg:hidden justify-around items-start xl:items-center">
                 <div className="flex flex-col justify-around items-start">
-                    <h1 className="text-4xl uppercase pt-12 pr-52 font-naslovi">
+                    <h1 className="text-4xl uppercase pt-12 lg:pr-52 font-naslovi">
                         <Trans i18nKey="title">
                         apartmani</Trans>
                     </h1>
@@ -41,12 +41,38 @@ const AppartmentPage = () => {
                     </ul>
                 </div>
                 <div>
-                    <img src={apartmani} className='border border-blue-dark'></img>
+                    <img src={apartmani} className='border border-blue-dark lg:hidden'></img>
+                </div>   
+            </div>
+            <div className="relative hidden lg:block ">
+                <img src={apartmani} className='border border-blue-dark w-1/2 fixed top-20 right-0'></img>
+                <div className="flex flex-col justify-around items-start">
+                    <h1 className="text-4xl uppercase lg:pr-52 font-naslovi">
+                        <Trans i18nKey="title">
+                        apartmani</Trans>
+                    </h1>
+                    <img src={debela} className="w-80 pb-12" />
+
+                    <p className="text-2xl font-naslovi">
+                    <Trans i18nKey="title1">
+                    ODMOR ZA DUŠU I TIJELO.</Trans>
+                    </p>
+                    <p className="text-xl pt-12 font-naslovi" ><Trans i18nKey="title2">Doživite</Trans></p>
+                    <ul className="list-none text-lg py-2 pb-10 w-1/2">
+                        <li><Trans i18nKey="li1">buđenje u zoru i promatranje rađanja dana</Trans></li>
+                        <li><Trans i18nKey="li2">jutarnje kupanje u predivnom čistom moru</Trans></li>
+                        <li><Trans i18nKey="li3">odmaranje na terasi u hladovini loze uz more</Trans></li>
+                        <li><Trans i18nKey="li4">kupanje na vlastitoj plaži</Trans></li>
+                        <li><Trans i18nKey="li5">promatranje zalaska sunca</Trans></li>
+                        <li><Trans i18nKey="li6">noćno kupanje</Trans></li>
+                        <li><Trans i18nKey="li7">zvjezdano nebo do mile volje</Trans></li>
+                        <li><Trans i18nKey="li8">spavanje uz šum valova</Trans></li>
+                        <li><Trans i18nKey="li9">mogućnost uživanja u domaćoj hrani u našem restoranu</Trans></li>
+                    </ul>
                 </div>
-                
             </div>
         </section>
-        <section className="px-10 md:px-32 py-20 md:py-44 text-normal bg-light relative">
+        <section className="px-2 md:px-32 py-20 md:py-44 text-normal bg-light relative">
 
         <div className='hidden lg:flex lg:flex-row lg:justify-around lg:items-center'>
 
@@ -67,9 +93,6 @@ const AppartmentPage = () => {
             </Card>
         </div>        
         <div className='flex flex-col justify-around items-center lg:hidden'>
-            <div className="flex flex-col items-center justify-start pb-6">
-                <h1 className="pb-8 text-left text-3xl uppercase font-naslovi"><Trans i18nKey="appart">Apartmani</Trans></h1>
-            </div>
             <Card className='shadow-sm shadow-headline w-3/4 pb-6'>
                 <img src={app1}></img>
                 <div className="flex flex-col items-center justify-around">

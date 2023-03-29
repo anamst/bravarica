@@ -72,7 +72,7 @@ const Form = () => {
                   name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
@@ -83,7 +83,7 @@ const Form = () => {
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
@@ -95,7 +95,7 @@ const Form = () => {
                   name="date"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
@@ -106,7 +106,7 @@ const Form = () => {
                   name="time"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
@@ -119,7 +119,7 @@ const Form = () => {
                   name="people"
                   value={people}
                   onChange={(e) => setPeople(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
@@ -130,7 +130,7 @@ const Form = () => {
                   name="mobile"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border-gray-300 rounded-md shadow-sm focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
@@ -142,7 +142,7 @@ const Form = () => {
                   name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="block w-full mt-2 px-16 py-8 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-2 px-16 py-8 border bg-light focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   rows="5"
                 ></textarea>
               </label>

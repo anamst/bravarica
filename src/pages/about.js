@@ -15,8 +15,8 @@ const AboutPage = () => {
     return ( 
     <Layout> 
         <section className="px-10 md:px-32 pt-20 md:pt-44 text-normal bg-light 2xl:h-full">
-        <div className="flex flex-col lg:flex-row-reverse items-start justify-start py-4">
-            <div className="flex flex-col items-start justify-around px-8 pb-8 relative">
+        <div className="flex flex-col lg:flex-row-reverse items-start md:justify-start py-12">
+            <div className="flex flex-col w-full items-start justify-around md:px-8 pb-8">
                 <h1 className="text-left text-3xl uppercase font-naslovi"><Trans i18nKey="title"> o nama</Trans></h1>
                 <img src={debela} className="w-80 pb-8" />
 
@@ -65,7 +65,7 @@ const AboutPage = () => {
               ><Button><Trans i18nKey="reserve">rezervirajte</Trans></Button></Link>  
 
             </div>
-            <div className="container grid grid-cols-2 gap-4">
+            <div className="container grid grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                 <div className="px-2">
                     <img src={kitchen1} className="border border-blue-dark"></img>
                 </div>

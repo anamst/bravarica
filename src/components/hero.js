@@ -15,11 +15,11 @@ const Hero = () => {
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 8000,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay]}
-                className="transition duration-500 delay-300 ease-in-out rotate-0 scale-100 h-screen mt-20 md:mt-24"
+                className="transition duration-300 delay-300 ease-in-out rotate-0 scale-100 xl:h-screen mt-20 md:mt-24"
             >
                 <SwiperSlide>
                     <img
