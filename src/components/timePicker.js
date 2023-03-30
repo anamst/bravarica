@@ -23,7 +23,7 @@ const TimePicker = () => {
   return (
     <div>
       <select value={hour + ":" + minute} onChange={handleHourChange} 
-        className="w-full block px-32 lg:px-22 py-2 mt-2 lg:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50">
+        className="w-full block px-20 md:px-14 lg:px-20 py-2 mt-2 md:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50">
         {options}
       </select>
     </div>

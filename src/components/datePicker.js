@@ -20,7 +20,7 @@ const Calendar = () => {
       minDate={new Date()}
       closeOnSelect={true}
       shouldCloseOnSelect={true}
-      className="w-full block px-12 lg:px-6 py-2 mt-2 border lg:mr-2 bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+      className="w-full block px-12 md:px-6 lg:px-8 py-2 mt-2 border md:mr-2 bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
       />
   );
 }

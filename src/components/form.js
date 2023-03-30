@@ -90,7 +90,7 @@ const Form = () => {
                 />
               </label>
             </div>
-            <div className="flex flex-col lg:flex-row justify around items-center">
+            <div className="flex flex-col md:flex-row justify around items-center">
             <div className="mb-2">
               <label className="block mb-8"> {t("form_date")}
                 <Calendar
@@ -115,14 +115,14 @@ const Form = () => {
               </label>
             </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify around items-center">
+            <div className="flex flex-col md:flex-row justify around items-center">
             <div className="mb-2">
               <label className="block mb-8"> {t("form_nr")}
                 <input
                   name="people"
                   value={people}
                   onChange={(e) => setPeople(e.target.value)}
-                  className="w-full block px-14 py-2 mt-2 lg:mr-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-14 py-2 mt-2 md:mr-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
@@ -133,7 +133,7 @@ const Form = () => {
                   name="mobile"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
-                  className="w-full block px-20 py-2 mt-2 lg:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-20 py-2 mt-2 md:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>

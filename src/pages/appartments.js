@@ -84,7 +84,7 @@ const AppartmentPage = () => {
                 </div>
             </Card>
             
-            <Card className='shadow-sm shadow-headline w-1/3 px12'>
+            <Card className='shadow-sm shadow-headline w-1/3 px-12'>
                 <img src={app2}></img>
                 <div className="flex flex-col items-center justify-around">
                     <h1 className="uppercase text-xl py-4 font-naslovi"><Trans i18nKey="appartment2">apartman 2</Trans></h1>

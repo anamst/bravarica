@@ -75,17 +75,17 @@ const RestoPage = () => {
                     <span className="text-xl font-naslovi text-headlines pt-4" ><Trans i18nKey="text11">Plata "Bravarica"</Trans></span>
                     <p className="text-base pb-4"><Trans i18nKey="text12">Paški sir, kozji sir, med od domaće kadulje, marmelada, rajčica, paprika, sezonsko voće, domaće maslinovo ulje</Trans></p>
                     </div>
-                    <img src={bravplata} className='lg:w-1/3 border border-blue-dark'></img>
+                    <img src={mijesanaplata} className='border border-blue-dark lg:w-1/3'></img>
                 </div>
-                <div className="flex flex-col lg:flex-row-reverse justify-between items-start lg:items-center pt-12">
-                    <div>
+                <div className="flex flex-col lg:flex-row-reverse justify-between items-start lg:items-center pt-4">
+                    <div className="lg:w-1/2">
                     <span className="text-xl font-naslovi text-headlines pt-4" ><Trans i18nKey="text21">"Miješana" plata</Trans></span>
                      <p className="text-base pb-4"><Trans i18nKey="text22">Carpaccio janjetina, govedina, svinjetina, umak s domaćim maslinovim uljem.</Trans></p>
                     </div>
-                    <img src={mijesanaplata} className='border border-blue-dark lg:w-1/3'></img>
+                    <img src={bravplata} className='lg:w-1/3 border border-blue-dark'></img>
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center pt-12">
-                    <div>
+                    <div className="lg:w-1/2">
                     <span className="text-xl pt-4 font-naslovi text-headlines" ><Trans i18nKey="text31">Riblja plata</Trans></span>
                     <p className="text-base pb-4 "><Trans i18nKey="text32">Carpaccio tuna, kozice, hobotnica, inćuni, domaće maslinovo ulje.</Trans></p>
                     </div>
