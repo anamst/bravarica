@@ -1,10 +1,12 @@
 import * as React from "react"
 import { useState } from "react";
-import Button from "./button.js"
 import debela from '../images/debela.png'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from 'gatsby';
 import { navigate } from 'gatsby-link'
+import Calendar from "./datePicker.js";
+import TimePicker from "./timePicker.js";
+
 
 
 
@@ -67,18 +69,18 @@ const Form = () => {
           <input type="hidden" name="form-name" value="forma" />
 
             <div className="mb-2">
-              <label> {t("form_imeprezime")}
+              <label className="block mb-8"> {t("form_imeprezime")}
                 <input
                   name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className=" w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
             </div>
             <div className="mb-2">
-              <label>{t("form_email")}
+              <label className="block mb-8">{t("form_email")}
                 <input
                   name="email"
                   value={email}
@@ -88,21 +90,22 @@ const Form = () => {
                 />
               </label>
             </div>
-            <div className="flex flex-row justify around items-center">
+            <div className="flex flex-col lg:flex-row justify around items-center">
             <div className="mb-2">
-              <label> {t("form_date")}
-                <input
-                  name="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
+              <label className="block mb-8"> {t("form_date")}
+                <Calendar
+                  selected={date}
+                  onChange={(newDate) => setDate(newDate)}
+                  closeOnSelect={true}
+                  shouldCloseOnSelect={true}
                   className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
             </div>
             <div className="mb-2">
-              <label> {t("form_time")}
-                <input
+              <label className="block mb-8"> {t("form_time")}
+                <TimePicker
                   name="time"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
@@ -112,32 +115,32 @@ const Form = () => {
               </label>
             </div>
             </div>
-            <div className="flex flex-row justify around items-center">
+            <div className="flex flex-col lg:flex-row justify around items-center">
             <div className="mb-2">
-              <label> {t("form_nr")}
+              <label className="block mb-8"> {t("form_nr")}
                 <input
                   name="people"
                   value={people}
                   onChange={(e) => setPeople(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-14 py-2 mt-2 lg:mr-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
             </div>
             <div className="mb-2">
-              <label> {t("form_mobile")}
+              <label className="block mb-8"> {t("form_mobile")}
                 <input
                   name="mobile"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                  className="w-full block px-20 py-2 mt-2 lg:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                   required
                 />
               </label>
             </div>
             </div>
             <div className="mb-2">
-              <label>
+              <label className="block mb-8">
                 <textarea
                   name="message"
                   value={message}
