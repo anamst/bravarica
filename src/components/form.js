@@ -122,7 +122,9 @@ const Form = () => {
             </div>
             <div className="mb-2">
               <label className="block mb-8"> {t("form_time")}
-              <select value={hour + ":" + minute} onChange={handleHourChange} 
+              <select
+                name="time"
+                value={hour + ":" + minute} onChange={handleHourChange} 
                   className="w-full block px-20 md:px-14 lg:px-20 py-2 mt-2 md:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50">
                     {options}
             </select>
