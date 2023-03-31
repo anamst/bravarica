@@ -4,8 +4,8 @@ import debela from '../images/debela.png'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from 'gatsby';
 import { navigate } from 'gatsby-link'
-import Calendar from "./datePicker.js";
-import TimePicker from "./timePicker.js";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 
@@ -15,31 +15,50 @@ const Form = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [hour, setHour] = useState(new Date().getHours());
+  const [minute, setMinute] = useState(Math.floor(new Date().getMinutes() / 30) * 30);
   const [people, setPeople] = useState('');
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
-  const encode = (data) => {
-    return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
+  const handleHourChange = (e) => {
+    setHour(parseInt(e.target.value));
   }
 
-/*   const [submitted, setSubmitted] = useState(false);
- const handleSubmit = (e) => {
+  const handleMinuteChange = (e) => {
+    setMinute(parseInt(e.target.value));
+  }
+
+  const options = [];
+  for (let h = 14; h < 22; h++) {
+    for (let m = 0; m < 60; m += 30) {
+      const time = ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2);
+      options.push(<option key={time} value={h + ":" + m}>{time}</option>);
+    }
+  }
+
+  const handleDateChange = (date) => {
+    if (date > new Date()) {
+      setSelectedDate(date);
+    } else {
+      alert('Selected date cannot be in the past');
+    }
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
 
     const myForm = e.target;
+    
     const formData = new FormData(myForm);
       fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
       })
-      .then(() => navigate(-1))
+      .then(() => navigate(`/resto`))
       .catch((error) => alert(error));
       
       if (!name || !email || !people || !mobile ) {
@@ -49,15 +68,6 @@ const Form = () => {
     
   };
 
-  if (submitted) {
-    return (
-      <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-        <h1 className="text-3xl text-center uppercase">
-         <Trans i18nKey="form_success">Hvala Vam na povjerenju. Javit ćemo Vam se uskoro s potvrdom.</Trans> 
-        </h1>
-      </div>
-    );
-  } */
     return (
       <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
         <div className="w-full p-6 m-auto bg-light lg:max-w-xl">
@@ -65,47 +75,13 @@ const Form = () => {
         <Trans i18nKey="form_title">kontaktirajte nas</Trans>
         </h1>
         <img src={debela} className="w-80 pb-8 mx-auto" />
-    {/*      <form
+          <form
           onSubmit={handleSubmit}
           method="post"
           data-netlify="true"
           name="forma"
           target="_blank"
-    className="mt-6"> */}
-          <form
-            onSubmit={
-              (values, actions) => {
-                fetch("/", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                  body: encode({ "form-name": "forma", ...values})
-                })
-                .then(() => navigate(`/resto`))
-                .catch((error) => alert(error));
-              }
-            }
-            validate={values => {
-              const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-              const errors = {};
-              if(!values.name) {
-                errors.name = 'Name Required'
-              }
-              if(!values.email || !emailRegex.test(values.email)) {
-                errors.email = 'Valid Email Required'
-              }
-              if(!values.message) {
-                errors.message = 'Message Required'
-              }
-              if(!values.people) {
-                errors.message = 'Message Required'
-              }if(!values.mobile) {
-                errors.message = 'Message Required'
-              }
-              
-              return errors;
-            }}
-          >
-
+           className="mt-6">
           <input type="hidden" name="form-name" value="forma" />
 
             <div className="mb-2">
@@ -133,25 +109,22 @@ const Form = () => {
             <div className="flex flex-col md:flex-row justify around items-center">
             <div className="mb-2">
               <label className="block mb-8"> {t("form_date")}
-                <Calendar
-                  selected={date}
-                  onChange={(newDate) => setDate(newDate)}
-                  closeOnSelect={true}
-                  shouldCloseOnSelect={true}
-                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
-                  required
-                />
+              <DatePicker
+                selected={selectedDate}
+                onChange={handleDateChange}
+                minDate={new Date()}
+                closeOnSelect={true}
+                shouldCloseOnSelect={true}
+                className="w-full block px-12 md:px-6 lg:px-8 py-2 mt-2 border md:mr-2 bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+              />
               </label>
             </div>
             <div className="mb-2">
               <label className="block mb-8"> {t("form_time")}
-                <TimePicker
-                  name="time"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                  className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
-                  required
-                />
+              <select value={hour + ":" + minute} onChange={handleHourChange} 
+                  className="w-full block px-20 md:px-14 lg:px-20 py-2 mt-2 md:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50">
+                    {options}
+            </select>
               </label>
             </div>
             </div>
