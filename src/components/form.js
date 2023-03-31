@@ -15,7 +15,7 @@ const Form = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
   const [hour, setHour] = useState(new Date().getHours());
   const [minute, setMinute] = useState(Math.floor(new Date().getMinutes() / 30) * 30);
   const [people, setPeople] = useState('');
@@ -38,9 +38,9 @@ const Form = () => {
     }
   }
 
-  const handleDateChange = (e) => {
-    if (selectedDate > new Date()) {
-      setSelectedDate(selectedDate);
+  const handleDateChange = (date) => {
+    if (date > new Date()) {
+      setDate(date);
     } else {
       alert('Selected date cannot be in the past');
     }
@@ -109,9 +109,10 @@ const Form = () => {
             <div className="flex flex-col md:flex-row justify around items-center">
             <div className="mb-2">
               <label className="block mb-8"> {t("form_date")}
+              <input type="hidden" name="date" value={date} />
               <DatePicker
                 name="date"
-                value={selectedDate}
+                value={date}
                 onChange={handleDateChange}
                 minDate={new Date()}
                 closeOnSelect={true}
