@@ -16,12 +16,14 @@ import smokvenjak from "../images/sm.png"
 import oinklogo from "../images/oinklogo.png"
 import debela from '../images/debela.png'
 import Card from "../components/card.js"
+import { Link } from "gatsby";
+import Button from "../components/button.js";
 
 const Dinner = () => {
     return ( 
     <Layout> 
         <section className="px-2">
-            <div className="lg:px-32 pt-32 pb-20 relative">
+            <div className="lg:px-32 pt-32 pb-12 relative">
                 <h1 className="text-4xl text-center text-strong uppercase font-naslovi">
                     Menu
                 </h1>
@@ -123,7 +125,10 @@ const Dinner = () => {
                 </Card>
                 </div>
                 </div>
-            </div>                
+                <div className="flex flex-col items-center justify-center">
+                  <Button><Link to={`/resto/#contact`}><Trans i18nKey="reserve">rezerviraj</Trans></Link></Button>              
+                </div>
+            </div>  
         </section>
     </Layout>
     )

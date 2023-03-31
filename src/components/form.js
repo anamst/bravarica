@@ -36,7 +36,7 @@ const Form = () => {
       .then(() => navigate(-1))
       .catch((error) => alert(error));
       
-      if (!name || !email || !date || !time || !people || !mobile ) {
+      if (!name || !email || !people || !mobile ) {
         alert('Please fill in all required fields');
       return;
     }

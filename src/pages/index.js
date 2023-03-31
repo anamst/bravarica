@@ -59,7 +59,7 @@ const HomePage = () => {
                 <h1 className="text-left text-3xl uppercase font-naslovi"><Trans i18nKey="title2">Restoran</Trans></h1>
                 <img src={debela} className="w-80 pb-8" />
                 <p className="py-6 text-lg text-center w-full md:text-left md:w-3/4"><Trans i18nKey="textresto">Terasa uz more u hladovini starih maslina s predivnim zalaskom sunca. Ukusna domaća hrana: paški sir, janjetina, riba, domaći kruh...</Trans></p>
-                <div className="mx-auto lg:mx-0">
+                <div className="flex flex-col items-center justify-center md:flex-row">
                 <Button className="p-12 inline-block"><Link to={`/resto`}><Trans i18nKey="title2">restoran</Trans></Link></Button>
                 <Button className="pr-12 inline-block"><Link to={`/dinner`}><Trans i18nKey="our">naš menu</Trans></Link></Button>
                 </div>
