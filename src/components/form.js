@@ -110,7 +110,8 @@ const Form = () => {
             <div className="mb-2">
               <label className="block mb-8"> {t("form_date")}
               <DatePicker
-                selected={selectedDate}
+                name="date"
+                value={selectedDate}
                 onChange={handleDateChange}
                 minDate={new Date()}
                 closeOnSelect={true}
