@@ -21,8 +21,14 @@ const Form = () => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e) => {
+  const encode = (data) => {
+    return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+  }
+
+/*   const [submitted, setSubmitted] = useState(false);
+ const handleSubmit = (e) => {
     e.preventDefault();
 
 
@@ -51,7 +57,7 @@ const Form = () => {
         </h1>
       </div>
     );
-  }
+  } */
     return (
       <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
         <div className="w-full p-6 m-auto bg-light lg:max-w-xl">
@@ -59,13 +65,47 @@ const Form = () => {
         <Trans i18nKey="form_title">kontaktirajte nas</Trans>
         </h1>
         <img src={debela} className="w-80 pb-8 mx-auto" />
-          <form
+    {/*      <form
           onSubmit={handleSubmit}
           method="post"
           data-netlify="true"
           name="forma"
           target="_blank"
-           className="mt-6">
+    className="mt-6"> */}
+          <form
+            onSubmit={
+              (values, actions) => {
+                fetch("/", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                  body: encode({ "form-name": "forma", ...values})
+                })
+                .then(() => navigate(`/resto`))
+                .catch((error) => alert(error));
+              }
+            }
+            validate={values => {
+              const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+              const errors = {};
+              if(!values.name) {
+                errors.name = 'Name Required'
+              }
+              if(!values.email || !emailRegex.test(values.email)) {
+                errors.email = 'Valid Email Required'
+              }
+              if(!values.message) {
+                errors.message = 'Message Required'
+              }
+              if(!values.people) {
+                errors.message = 'Message Required'
+              }if(!values.mobile) {
+                errors.message = 'Message Required'
+              }
+              
+              return errors;
+            }}
+          >
+
           <input type="hidden" name="form-name" value="forma" />
 
             <div className="mb-2">
