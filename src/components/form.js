@@ -38,9 +38,9 @@ const Form = () => {
     }
   }
 
-  const handleDateChange = (date) => {
-    if (date > new Date()) {
-      setSelectedDate(date);
+  const handleDateChange = (e) => {
+    if (selectedDate > new Date()) {
+      setSelectedDate(selectedDate);
     } else {
       alert('Selected date cannot be in the past');
     }
