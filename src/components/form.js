@@ -4,8 +4,7 @@ import debela from '../images/debela.png'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from 'gatsby';
 import { navigate } from 'gatsby-link'
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import CustomCalendar from "./datePicker.js";
 
 
 
@@ -37,14 +36,6 @@ const Form = () => {
       options.push(<option key={time} value={h + ":" + m}>{time}</option>);
     }
   }
-
-  const handleDateChange = (date) => {
-    if (date > new Date()) {
-      setDate(date);
-    } else {
-      alert('Selected date cannot be in the past');
-    }
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -110,19 +101,18 @@ const Form = () => {
             <div className="mb-2">
               <label className="block mb-8"> {t("form_date")}
               <input type="hidden" name="date" value={date} />
-              <DatePicker
-                name="date"
-                value={date}
-                onChange={handleDateChange}
-                minDate={new Date()}
-                closeOnSelect={true}
-                shouldCloseOnSelect={true}
-                className="w-full block px-12 md:px-6 lg:px-8 py-2 mt-2 border md:mr-2 bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
-              />
-              </label>
+                <CustomCalendar
+                  value={date}
+                  onChange={handleSubmit}
+                  minDate={new Date()}
+                  className="w-full block px-12 md:px-6 lg:px-8 py-2 mt-2 border md:mr-2 bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
+                />
+                <input type="hidden" name="date" value={date} />
+              </label> 
             </div>
             <div className="mb-2">
               <label className="block mb-8"> {t("form_time")}
+              <input type="hidden" name="date" value={date} />
               <select
                 name="time"
                 value={hour + ":" + minute} onChange={handleHourChange} 

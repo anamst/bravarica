@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const Calendar = () => {
+const CustomCalendar = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
@@ -25,4 +25,4 @@ const Calendar = () => {
   );
 }
 
-export default Calendar;
+export default CustomCalendar;

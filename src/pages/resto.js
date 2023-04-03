@@ -13,6 +13,7 @@ import preporuka3 from '../images/preporuka3.jpeg'
 import preporuka4 from '../images/preporuka4.jpeg'
 import dinner from '../images/dinner.jpeg'
 import debela from '../images/debela.png'
+import FormNew from "../components/novo.js";
 
 
 
@@ -121,7 +122,7 @@ const RestoPage = () => {
         </div>
     </section>
     <section id='contact' className="px-10 md:px-32 text-normal bg-light relative">
-        <Form></Form>
+        <FormNew></FormNew>
     </section>
     </Layout>
     )
