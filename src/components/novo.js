@@ -163,7 +163,7 @@ const FormNew = () => {
             <div className="flex flex-col md:flex-row justify around items-center">
             <div className="mb-2">
               <label htmlFor="date" className="block mb-8"> {t("form_date")}
-              <input type="hidden" name="date" value={date} />
+              <input type="hidden" name="date" value={selectedDate} />
                 <DatePicker
                   id="date"
                   name="date"
