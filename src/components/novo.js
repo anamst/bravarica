@@ -158,12 +158,12 @@ const FormNew = () => {
                   className="w-full block px-16 py-2 mt-2 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                 />
               </label>
-              {errors.date && <span className="error">{errors.email }</span>}
+              {errors.email && <span className="error">{errors.email }</span>}
             </div>
             <div className="flex flex-col md:flex-row justify around items-center">
             <div className="mb-2">
               <label htmlFor="date" className="block mb-8"> {t("form_date")}
-              <input type="hidden" name="date" value={selectedDate} />
+              <input type="hidden" name="date" value={date} />
                 <DatePicker
                   id="date"
                   name="date"
