@@ -77,12 +77,12 @@ const FormNew = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const myForm = e.target;
     
-    const formData = new FormData(myForm);
 
     if (validateForm()) {
-
+        const myForm = e.target;
+    
+        const formData = new FormData(myForm);
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -132,8 +132,7 @@ const FormNew = () => {
           method="post"
           data-netlify="true"
           name="forma"
-          target="_blank"
-           className="mt-6">
+            className="mt-6">
           <input type="hidden" name="form-name" value="forma" />
           <div className="mb-2">
               <label className="block mb-8" htmlFor="name"> {t("form_imeprezime")}

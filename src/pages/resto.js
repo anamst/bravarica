@@ -3,7 +3,6 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from 'gatsby';
 import Layout from "../components/layout/layout.js"
 import Button from '../components/button.js'
-import Form from "../components/form.js"
 import { Link } from "gatsby"
 import Card from '../components/card.js'
 import restoran from '../images/restoran.jpeg'
