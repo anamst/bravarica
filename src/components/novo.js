@@ -7,12 +7,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import { navigate } from "gatsby-link";
 
 const FormNew = () => {
+    /* labels translation */
     const { t } = useTranslation();
 
   const [state, setState] = useState({});
   const [errors, setErrors] = useState({});
-  const [selectedDate, setSelectedDate] = useState(new Date());
 
+    /* validacija */
   const validateForm = () => {
     let isValid = true;
     const errors = {};
@@ -64,7 +65,7 @@ const FormNew = () => {
 
   
   const handleDateChange = (date) => {
-    setSelectedDate(date);
+    setState({ ...state, date: date });
   }; 
 
   const handleTimeChange = (e) => {
@@ -76,14 +77,13 @@ const FormNew = () => {
     
 
     if (validateForm()) {
-        const myForm = e.target;
-    
-        const formData = new FormData(myForm);
+        const form = e.target;
+        
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
-          "form-name": formData.getAttribute("name"),
+          "form-name": form.getAttribute("name"),
           ...state,
         }),
       })
@@ -159,17 +159,17 @@ const FormNew = () => {
             <div className="flex flex-col md:flex-row justify around items-center">
             <div className="mb-2">
               <label htmlFor="date" className="block mb-8"> {t("form_date")}
-              <input type="hidden" name="date" value={selectedDate} />
                 <DatePicker
                   id="date"
                   name="date"
-                  selected={selectedDate}
-                onChange={handleDateChange}
-                minDate={new Date()}
+                  selected={state.date}
+                  onChange={handleDateChange}
+                  minDate={new Date()}
                   dateFormat="dd.MM.yyyy"
                   className="w-full block px-12 md:px-6 lg:px-8 py-2 mt-2 border md:mr-2 bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                 />
               </label> 
+              {errors.date && <span className="error">{errors.date}</span>}
             </div>
             <div className="mb-2">
               <label htmlFor="time" className="block mb-8"> {t("form_time")}
