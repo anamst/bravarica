@@ -5,7 +5,7 @@
     siteMetadata: {
         title: `OPG-Bravarica`,
         description:`Restaurant and family apartments on the island Pag, in beautiful Adriatic sea at open bay for boats.`,
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://www.bravarica-kusaona.hr`,
     },
     plugins: [
         "gatsby-plugin-netlify",

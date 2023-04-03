@@ -15,6 +15,7 @@ import resto2 from '../images/resto2.jpeg'
 import app1 from '../images/app1.jpeg'
 import app2 from '../images/app2.jpeg'
 import debela from '../images/debela.png'
+import { SEO } from '../components/seo'
 
 
 
@@ -125,7 +126,11 @@ const HomePage = () => {
 
 export default HomePage
 
-export const Head = () => <title> OPG Bravarica </title>
+export const Head = () => {
+    <SEO />
+
+}
+
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(
