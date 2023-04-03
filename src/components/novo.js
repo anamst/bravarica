@@ -33,6 +33,9 @@ const FormNew = () => {
     if (!state.date) {
       errors.date = "Date is required";
       isValid = false;
+    } else if (state.date < new Date()) {
+        errors.date = "Selected date cannot be in the past";
+        isValid = false;
     }
 
     if (!state.time) {
@@ -41,7 +44,7 @@ const FormNew = () => {
     }
 
     if (!state.people) {
-        errors.number = "Number of guests is required";
+        errors.people = "Number of guests is required";
         isValid = false;
     }
 
@@ -59,17 +62,10 @@ const FormNew = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
+  
   const handleDateChange = (date) => {
-    if (date > new Date()) {
-      setSelectedDate(date);
-    } else {
-      alert('Selected date cannot be in the past');
-    }
-  };
-  /*
-  const handleDateChange = (date) => {
-    setState({ ...state, date: date });
-  }; */
+    setSelectedDate(date);
+  }; 
 
   const handleTimeChange = (e) => {
     setState({ ...state, time: e.target.value });
@@ -173,7 +169,6 @@ const FormNew = () => {
                   dateFormat="dd.MM.yyyy"
                   className="w-full block px-12 md:px-6 lg:px-8 py-2 mt-2 border md:mr-2 bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50"
                 />
-                <input type="hidden" name="date" value={selectedDate} />
               </label> 
             </div>
             <div className="mb-2">
@@ -183,7 +178,7 @@ const FormNew = () => {
                 id="time"
                 name="time"
                 value={state.time || ""}
-                onChange={handleChange} 
+                onChange={handleTimeChange} 
                   className="w-full block px-20 md:px-14 lg:px-20 py-2 mt-2 md:ml-1 border bg-light focus:border-highlight focus:ring focus:ring-highlight focus:ring-opacity-50">
                     <option value=""></option>
                         {timeOptions.map((option) => (
