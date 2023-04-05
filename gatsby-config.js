@@ -4,7 +4,7 @@
  module.exports = {
     siteMetadata: {
         title: `OPG-Bravarica`,
-        description:`Restaurant and family apartments on the island Pag, in beautiful Adriatic sea at open bay for boats.`,
+        description:`Family restaurant and apartments for rent on the island Pag, at beautiful Adriatic sea at open bay for boats.`,
         siteUrl: `https://www.bravarica-kusaona.hr`,
     },
     plugins: [
