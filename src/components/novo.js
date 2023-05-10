@@ -87,7 +87,7 @@ const FormNew = () => {
           ...state,
         }),
       })
-        .then(() => navigate(`/resto`))
+        .then(() => navigate(`/thankyou`))
         .catch((error) => alert(error));
     }
   };

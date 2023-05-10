@@ -49,7 +49,7 @@ const Form = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
       })
-      .then(() => navigate(`/resto`))
+      .then(() => navigate(`/thankyou`))
       .catch((error) => alert(error));
       
       if (!name || !email || !people || !mobile ) {
