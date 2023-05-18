@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { Link } from "gatsby"
+import { graphql } from 'gatsby';
 import Card from '../components/card.js'
 
 
