@@ -19,7 +19,7 @@ import { SEO } from '../components/seo'
 
 
 
-const HomePage = () => {
+const HomePage = ({data}) => {
     const { t } = useTranslation();
     return ( 
     <Layout> 

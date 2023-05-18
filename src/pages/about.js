@@ -60,7 +60,6 @@ const AboutPage = () => {
                     <span className="text-lg text-right">
                         Šonjevi stani 31a, 53291 Novalja
                     </span>
-                    <Link to={`/thankyou`}>link</Link>
                 </div>
                 <div className="flex flex-col items-center justify-center md:flex-row mx-auto lg:mx-0">
                 <Link to={`/resto/#contact`}><Button><Trans i18nKey="reserve">rezervirajte</Trans></Button></Link>
