@@ -10,6 +10,7 @@ import kitchen1 from '../images/kitchen1.jpeg'
 import kitchen2 from '../images/kitchen2.jpeg'
 import kitchen3 from '../images/kitchen3.jpeg'
 import kitchen4 from '../images/kitchen4.jpeg'
+import happyhour from '../images/happyhour.jpeg'
 import resto1 from '../images/resto1.jpeg'
 import resto2 from '../images/resto2.jpeg'
 import app1 from '../images/app1.jpeg'
@@ -70,6 +71,7 @@ const HomePage = ({data}) => {
             </div> 
         </div>
     </section>
+    <img src={happyhour} className="w-screen" />
     <section className="px-2 md:px-32 pt-20 pb-20 md:pt-32 text-normal bg-light">
         <div className='hidden md:flex md:flex-row md:justify-around md:items-center'>
             <Card className='w-1/2 shadow-sm shadow-headline px-12'>

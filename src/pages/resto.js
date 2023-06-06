@@ -7,6 +7,7 @@ import { Link } from "gatsby"
 import Card from '../components/card.js'
 import restoran from '../images/restoran.jpeg'
 import bravplata from '../images/bravplata.png'
+import happyhour from '../images/happyhour.jpeg'
 import mijesanaplata from '../images/mijesanaplata.png'
 import preporuka3 from '../images/preporuka3.jpeg'
 import preporuka4 from '../images/preporuka4.jpeg'
@@ -20,7 +21,7 @@ import FormNew from "../components/novo.js";
 const RestoPage = () => {
     return ( 
     <Layout> 
-        <section id="hero" className="px-10 lg:px-20 xl:px-32 pt-12 lg:pt-20 2xl:pt-52 text-normal bg-light relative">
+        <section id="hero" className="px-10 lg:px-20 xl:px-32 py-12 lg:pt-20 2xl:pt-52 text-normal bg-light relative">
             <div className="flex flex-col xl:hidden justify-around items-end">
                 <div className="flex flex-col justify-around items-start lg:pr-32">
 
@@ -64,6 +65,7 @@ const RestoPage = () => {
                 </div>
             </div>
         </section>
+        <img src={happyhour} className="w-screen relative" />
         <section className="px-10 md:px-32 pt-12 text-normal bg-light relative">
             <div className="flex flex-col justify-around items-center">
                 <div>
