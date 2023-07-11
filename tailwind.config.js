@@ -3,9 +3,9 @@ module.exports = {
     content: [
         "./src/pages/**/*.{js,jsx,ts,tsx}",
         "./src/components/**/*.{js,jsx,ts,tsx}",
+        "./src/components/layout/**/*.{js,jsx,ts,tsx}",
     ],
-    theme: {
-        
+    theme: {   
         fontFamily: {
             tekst: ['Open Sans', 'sans-serif'],
             naslovi: ['Kanit', 'sans-serif'],
