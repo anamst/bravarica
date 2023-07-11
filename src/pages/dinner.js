@@ -40,15 +40,15 @@ const Dinner = () => {
           <div className="flex flex-col justify-around pt-8 lg:pt-20">
             <div className="flex flex-row justify-around items-center">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="small">small</Trans></p>
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">20 € / kg  (150,69 kn)</p>
+              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">20 €  (150,69 kn)</p>
             </div>
             <div className="flex flex-row justify-around items-center lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="medium">medium</Trans></p>
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">35 € / kg  (263,70 kn)</p>
+              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">35 €  (263,70 kn)</p>
             </div>
             <div className="flex flex-row justify-around items-center lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="velika">large</Trans></p>
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">50 € / kg  (376,72 kn)</p>
+              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">50 €  (376,72 kn)</p>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-around items-center pt-8 lg:pt-12">
@@ -426,16 +426,16 @@ const Dinner = () => {
           </div>
           <div className="relative flex flex-row justify-between">
             
-            <img src={drink} className="w-44 -ml-16 h-44 lg:h-auto lg:w-1/2 lg:-ml-36 lg:mt-12" />
+            <img src={drink} className="w-44 absolute left-16 bottom-0 h-44 lg:relative lg:h-auto lg:w-1/2 lg:-ml-36 lg:mt-12" />
          
-            <div className="flex flex-col relative justify-around items-center py-24">
+            <div className="flex flex-col relative justify-around pt-10 pb-52 items-center lg:py-24">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="limun">limun</Trans> 0,25 l</p>
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="mal">malina</Trans> 0,25 l</p>
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="bor">borovnica</Trans> 0,25 l</p>
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="sv">šumsko voće</Trans> 0,25 l</p>
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="vis">višnja</Trans> 0,25 l</p>
             </div>
-            <div className="flex flex-col justify-around items-center py-24">
+            <div className="flex flex-col justify-around pt-10 pb-52 items-center lg:py-24">
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">8 € (60,28 kn)</p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
@@ -444,7 +444,7 @@ const Dinner = () => {
             </div>
           </div>
          <div className="pb-12 text-center">
-          <p className="font-cursive text-lg lg:text-3xl">made with Love</p>
+          <p className="font-cursive text-lg lg:text-3xl">Made with Love</p>
          </div>
         </section>
 
