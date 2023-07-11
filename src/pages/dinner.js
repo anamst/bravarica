@@ -426,7 +426,7 @@ const Dinner = () => {
           </div>
           <div className="relative flex flex-row justify-between">
             
-            <img src={drink} className="w-44 absolute left-16 bottom-0 h-44 lg:relative lg:h-auto lg:w-1/2 lg:-ml-36 xl:-ml-52 lg:mt-12" />
+            <img src={drink} className="w-44 absolute bottom-0 -left-12 h-44 lg:relative lg:h-auto lg:w-1/2 lg:-ml-36 xl:-ml-52 lg:mt-12" />
          
             <div className="flex flex-col relative justify-around pt-10 pb-52 items-start text-left lg:py-24">
               <p className="uppercase text-left font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="limun">limun</Trans> 0,25 l</p>
