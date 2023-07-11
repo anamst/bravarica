@@ -428,19 +428,19 @@ const Dinner = () => {
             
             <img src={drink} className="w-44 absolute left-16 bottom-0 h-44 lg:relative lg:h-auto lg:w-1/2 lg:-ml-36 lg:mt-12" />
          
-            <div className="flex flex-col relative justify-around pt-10 pb-52 items-center lg:py-24">
-              <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="limun">limun</Trans> 0,25 l</p>
-              <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="mal">malina</Trans> 0,25 l</p>
-              <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="bor">borovnica</Trans> 0,25 l</p>
-              <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="sv">šumsko voće</Trans> 0,25 l</p>
-              <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="vis">višnja</Trans> 0,25 l</p>
+            <div className="flex flex-col relative justify-around pt-10 pb-52 items-start text-left lg:py-24">
+              <p className="uppercase text-left font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="limun">limun</Trans> 0,25 l</p>
+              <p className="uppercase text-left font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="mal">malina</Trans> 0,25 l</p>
+              <p className="uppercase text-left font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="bor">borovnica</Trans> 0,25 l</p>
+              <p className="uppercase text-left font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="sv">šumsko voće</Trans> 0,25 l</p>
+              <p className="uppercase text-left font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="vis">višnja</Trans> 0,25 l</p>
             </div>
-            <div className="flex flex-col justify-around pt-10 pb-52 items-center lg:py-24">
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">8 € (60,28 kn)</p>
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
-              <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
+            <div className="flex flex-col justify-around pt-10 pb-52 items-center text-right lg:py-24">
+              <p className="uppercase text-right font-semibold text-sm pt-2 lg:text-xl lg:pt-3">8 € (60,28 kn)</p>
+              <p className="uppercase text-right font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
+              <p className="uppercase text-right font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
+              <p className="uppercase text-right font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
+              <p className="uppercase text-right font-semibold text-sm pt-2 lg:text-xl lg:pt-3">6 € (45,21 kn)</p>
             </div>
           </div>
          <div className="pb-12 text-center">
