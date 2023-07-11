@@ -30,7 +30,7 @@ const HomePage = ({data}) => {
             <div className="flex flex-col items-center md:items-start justify-between pb-8">
                 <h1 className="font-naslovi text-left text-3xl uppercase text-headlines"><Trans i18nKey="title">upoznajte nas</Trans></h1>
                 <img src={debela} className="w-80 pb-8" />
-                <p className="w-full py-6 text-lg lext-center lg:text-left w-3/4 lg:w-1/2"><Trans i18nKey="toptext">Ukusna domaća hrana za turiste željne autohtonih okusa hrvatskih specijaliteta.
+                <p className="py-6 text-lg lext-center lg:text-left w-full lg:w-1/2"><Trans i18nKey="toptext">Ukusna domaća hrana za turiste željne autohtonih okusa hrvatskih specijaliteta.
                     Dopustite da Vas očaramo svojim ugodnih ambijentom, veselim zdravicama a ponekad i pjesmom uvijek opuštenih gostiju koji se kod nas osjećaju kao kod kuće i uvijek se s razlogom vraćaju. Želimo ovu ljepotu i mir podijeliti s Vama i ponuditi Vam gostoprimstvo u našim apartmanima i restoranu. <br></br>
                     DOBRO DOŠLI!</Trans> 
                 </p>

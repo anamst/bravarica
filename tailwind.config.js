@@ -4,6 +4,16 @@ module.exports = {
         "./src/**/**/*.{js,jsx,ts,tsx}"
     ],
     theme: {   
+        fontSize: {
+            'sm': '0.875rem',
+            'base': '1rem',
+            'lg': '1.125rem',
+            'xl': '1.25rem',
+            '2xl': '1.563rem',
+            '3xl': '1.875rem',
+            '4xl': '2.25rem',
+            '5xl': '3.052rem',
+          },
         fontFamily: {
             tekst: ['Open Sans', 'sans-serif'],
             naslovi: ['Kanit', 'sans-serif'],
