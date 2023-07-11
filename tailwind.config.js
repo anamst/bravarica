@@ -5,6 +5,7 @@ module.exports = {
         "./src/components/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
+        
         fontFamily: {
             tekst: ['Open Sans', 'sans-serif'],
             naslovi: ['Kanit', 'sans-serif'],
