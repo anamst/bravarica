@@ -190,29 +190,29 @@ const Dinner = () => {
               <h1 className="uppercase font-500 text-xl lg:text-3xl text-center py-4 lg:py-8"><Trans i18nKey="prilozi">prilozi</Trans></h1>
           </div>
           <div className="flex flex-col justify-around py-12 lg:py-20">
-            <div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row justify-between items-baseline">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="salata1">salata: rajčica i paprika</Trans></p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">5 € (37,67 kn)</p>
             </div>
-            <div className="flex flex-row justify-between items-center lg:pt-6">
+            <div className="flex flex-row justify-between items-baseline lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="salata2">salata: rajčica</Trans></p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">5 € (37,67 kn)</p>
             </div>
-            <div className="flex flex-row justify-between items-center lg:pt-6">
+            <div className="flex flex-row justify-between items-baseline lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="salata3">salata: paprika</Trans></p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">5 € (37,67 kn)</p>
             </div>
-            <div className="flex flex-row justify-between items-center lg:pt-6">
+            <div className="flex flex-row justify-between items-baseline lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="dresing1">preljev: češnjak, peršin i maslinovo ulje</Trans></p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">5 € (37,67 kn)</p>
-            </div><div className="flex flex-row justify-between items-center lg:pt-6">
+            </div><div className="flex flex-row justify-between items-baseline lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="dresing2">preljev: češnjak i maslinovo ulje</Trans></p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">5 € (37,67 kn)</p>
-            </div><div className="flex flex-row justify-between items-center lg:pt-6">
+            </div><div className="flex flex-row justify-between items-baseline lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="dresing3">preljev: peršin i maslinovo ulje</Trans></p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">5 € (37,67 kn)</p>
             </div>
-            <div className="flex flex-row justify-between items-center lg:pt-6">
+            <div className="flex flex-row justify-between items-baseline lg:pt-6">
               <p className="uppercase font-thin text-sm pt-2 lg:text-xl lg:pt-3"><Trans i18nKey="povrce">povrće na žaru: rajčica, paprika i tikvica</Trans></p>
               <p className="uppercase font-semibold text-sm pt-2 lg:text-xl lg:pt-3">10 € (75,35 kn)</p>
             </div>
