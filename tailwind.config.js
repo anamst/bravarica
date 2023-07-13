@@ -13,6 +13,7 @@ module.exports = {
             '3xl': '1.875rem',
             '4xl': '2.25rem',
             '5xl': '3.052rem',
+            '6xl': '3.75rem',
           },
         fontFamily: {
             tekst: ['Open Sans', 'sans-serif'],

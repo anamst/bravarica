@@ -1,11 +1,14 @@
 {
     "title": "meet us",
-    "toptext": "Delicious homemade food for guests eager for authentic Croatian flavors. Let yourself be enchanted by our pleasant atmosphere, cheerful toasts and sometimes even songs with our always relaxed guests who feel at home with us and always come back for a reason. We want to share this beauty and peace with you and offer you hospitality in our apartments and restaurant. WELCOME!",
+    "toptext1": "Delicious homemade food for guests eager for authentic Croatian flavors.",
+    "toptext2": "Let yourself be enchanted by our pleasant atmosphere, cheerful toasts and sometimes even songs with our always relaxed guests who feel at home with us and always come back for a reason. We want to share this beauty and peace with you and offer you hospitality in our apartments and restaurant.",
+    "toptext3": "WELCOME!",
     "reserve": "Reservation",
     "title2": "Restaurant",
     "textresto": "A terrace by the sea, shaded by old olive trees with a beautiful sunset. Delicious homemade food: Pag cheese, lamb, fish, homemade bread",
     "appartments": "Apartments",
     "textapp": "Close to the sea, without crowds, sounds and scents of nature, the sound of the sea and a beautiful sunset.",
     "appartment1": "Apartment 1",
-    "appartment2": "Apartment 2"
+    "appartment2": "Apartment 2",
+    "popust": "10% discount on everything"
 }

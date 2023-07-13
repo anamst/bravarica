@@ -53,9 +53,9 @@ const Header = () => {
                   <Trans i18nKey="header_about">
             O nama</Trans>
           </Link>
-          <ul className="md:pl-4 pt-12 md:pt-0 inline uppercase ">
+          <ul className="md:pl-4 pt-20 md:pt-1 inline uppercase ">
             {languages.map((lng) => (
-              <li className='inline pr-2 pt-8' key={lng}>
+              <li className='inline pr-2 pt-12' key={lng}>
                <Link to={originalPath} language={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }}>
                 {lng}
               </Link>

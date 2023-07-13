@@ -15,12 +15,10 @@ const AboutPage = () => {
     return ( 
     <Layout> 
         <section className="px-10 md:px-32 pt-20 md:pt-44 text-normal bg-light 2xl:h-full">
+        <h1 className="text-center text-3xl uppercase font-naslovi"><Trans i18nKey="title"> o nama</Trans></h1>
         <div className="flex flex-col lg:flex-row-reverse items-start md:justify-start py-12">
             <div className="flex flex-col w-full items-start justify-around md:px-8 pb-8">
-                <h1 className="text-left text-3xl uppercase font-naslovi"><Trans i18nKey="title"> o nama</Trans></h1>
-                <img src={debela} className="w-80 pb-8" />
-
-                <p className="py-6 text-lg text-left w-3/4"><Trans i18nKey="text">Mi smo autohtona obitelj ovoga kraja koja već više generacija živi na ovom prekrasnom mjestu. Želimo ovu ljepotu i mir podijeliti s Vama i ponuditi Vam gostoprimstvo u našim apartmanima i restoranu. DOBRO DOŠLI!</Trans> </p>
+                <p className="text-lg text-left w-3/4"><Trans i18nKey="text">Mi smo autohtona obitelj ovoga kraja koja već više generacija živi na ovom prekrasnom mjestu. Želimo ovu ljepotu i mir podijeliti s Vama i ponuditi Vam gostoprimstvo u našim apartmanima i restoranu. DOBRO DOŠLI!</Trans> </p>
                     <div className="flex flex-row justify-between py-4">
                     <span className="font-semibold text-lg uppercase pr-4 font-naslovi">
                     <Trans i18nKey="hours">radno vrijeme: </Trans>

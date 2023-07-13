@@ -14,63 +14,30 @@ import debela from '../images/debela.png'
 const AppartmentPage = () => {
     return ( 
         <Layout> 
-        <section id="hero" className="px-10 lg:px-20 xl:px-32  pt-20 md:pt-32 text-normal bg-light">
-            <div className="flex flex-col lg:hidden justify-around items-start xl:items-center">
-                <div className="flex flex-col justify-around items-start">
-                    <h1 className="text-4xl uppercase pt-12 lg:pr-52 font-naslovi">
+        <img src={apartmani} className="h-screen w-screen" />
+        <section id="hero" className="px-10 lg:px-20 xl:px-32 pt-20 text-normal bg-light">
+                <div className="flex flex-col justify-around items-center w-full">
+                    <h1 className="text-4xl uppercase py-12 font-naslovi">
                         <Trans i18nKey="title">
                         apartmani</Trans>
                     </h1>
-                    <img src={debela} className="w-80 pb-12" />
-
-                    <p className="text-2xl font-naslovi">
+                    <p className="text-3xl font-naslovi">
                     <Trans i18nKey="title1">
                     ODMOR ZA DUŠU I TIJELO.</Trans>
                     </p>
-                    <p className="text-xl pt-12 font-naslovi" ><Trans i18nKey="title2">Doživite</Trans></p>
-                    <ul className="list-none text-lg py-2 pb-10">
-                        <li><Trans i18nKey="li1">buđenje u zoru i promatranje rađanja dana</Trans></li>
-                        <li><Trans i18nKey="li2">jutarnje kupanje u predivnom čistom moru</Trans></li>
-                        <li><Trans i18nKey="li3">odmaranje na terasi u hladovini loze uz more</Trans></li>
-                        <li><Trans i18nKey="li4">kupanje na vlastitoj plaži</Trans></li>
-                        <li><Trans i18nKey="li5">promatranje zalaska sunca</Trans></li>
-                        <li><Trans i18nKey="li6">noćno kupanje</Trans></li>
-                        <li><Trans i18nKey="li7">zvjezdano nebo do mile volje</Trans></li>
-                        <li><Trans i18nKey="li8">spavanje uz šum valova</Trans></li>
-                        <li><Trans i18nKey="li9">mogućnost uživanja u domaćoj hrani u našem restoranu</Trans></li>
+                    <p className="text-xl pt-12 font-naslovi text-left" ><Trans i18nKey="title2">Doživite</Trans></p>
+                    <ul className="list-none text-lg py-2 pb-10 font-thin">
+                        <li className="pt-2"><Trans i18nKey="li1">buđenje u zoru i promatranje rađanja dana</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li2">jutarnje kupanje u predivnom čistom moru</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li3">odmaranje na terasi u hladovini loze uz more</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li4">kupanje na vlastitoj plaži</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li5">promatranje zalaska sunca</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li6">noćno kupanje</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li7">zvjezdano nebo do mile volje</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li8">spavanje uz šum valova</Trans></li>
+                        <li  className="pt-2"><Trans i18nKey="li9">mogućnost uživanja u domaćoj hrani u našem restoranu</Trans></li>
                     </ul>
-                </div>
-                <div>
-                    <img src={apartmani} className='border border-blue-dark lg:hidden'></img>
-                </div>   
-            </div>
-            <div className="relative hidden lg:block ">
-                <img src={apartmani} className='border border-blue-dark w-1/2 fixed top-20 right-0'></img>
-                <div className="flex flex-col justify-around items-start">
-                    <h1 className="text-4xl uppercase lg:pr-52 font-naslovi">
-                        <Trans i18nKey="title">
-                        apartmani</Trans>
-                    </h1>
-                    <img src={debela} className="w-80 pb-12" />
-
-                    <p className="text-2xl font-naslovi">
-                    <Trans i18nKey="title1">
-                    ODMOR ZA DUŠU I TIJELO.</Trans>
-                    </p>
-                    <p className="text-xl pt-12 font-naslovi" ><Trans i18nKey="title2">Doživite</Trans></p>
-                    <ul className="list-none text-lg py-2 pb-10 w-1/2">
-                        <li><Trans i18nKey="li1">buđenje u zoru i promatranje rađanja dana</Trans></li>
-                        <li><Trans i18nKey="li2">jutarnje kupanje u predivnom čistom moru</Trans></li>
-                        <li><Trans i18nKey="li3">odmaranje na terasi u hladovini loze uz more</Trans></li>
-                        <li><Trans i18nKey="li4">kupanje na vlastitoj plaži</Trans></li>
-                        <li><Trans i18nKey="li5">promatranje zalaska sunca</Trans></li>
-                        <li><Trans i18nKey="li6">noćno kupanje</Trans></li>
-                        <li><Trans i18nKey="li7">zvjezdano nebo do mile volje</Trans></li>
-                        <li><Trans i18nKey="li8">spavanje uz šum valova</Trans></li>
-                        <li><Trans i18nKey="li9">mogućnost uživanja u domaćoj hrani u našem restoranu</Trans></li>
-                    </ul>
-                </div>
-            </div>
+                </div>      
         </section>
         <section className="px-2 md:px-32 py-20 md:py-44 text-normal bg-light relative">
 

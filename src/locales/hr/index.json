@@ -1,6 +1,8 @@
 {
     "title": "upoznajte nas",
-    "toptext": "Ukusna domaća hrana za goste željne autohtonih okusa hrvatskih specijaliteta. Dopustite da Vas očaramo svojim ugodnim ambijentom, veselim zdravicama, a ponekad i pjesmom uvijek s opuštenim gostima koji se kod nas osjećaju kao kod kuće i uvijek se s razlogom vraćaju. Želimo ovu ljepotu i mir podijeliti s Vama i ponuditi Vam gostoprimstvo u našim apartmanima i restoranu. DOBRO DOŠLI!",
+    "toptext1": "Ukusna domaća hrana za goste željne autohtonih okusa hrvatskih specijaliteta.",
+    "toptext2": "Dopustite da Vas očaramo svojim ugodnim ambijentom, veselim zdravicama, a ponekad i pjesmom uvijek s opuštenim gostima koji se kod nas osjećaju kao kod kuće i uvijek se s razlogom vraćaju. Želimo ovu ljepotu i mir podijeliti s Vama i ponuditi Vam gostoprimstvo u našim apartmanima i restoranu.",
+    "toptext3": "DOBRO DOŠLI!",
     "reserve": "Rezerviraj",
     "title2": "Restoran",
     "textresto": "Terasa uz more u hladovini starih maslina s predivnim zalaskom sunca. Ukusna domaća hrana: paški sir, janjetina, riba, domaći kruh...",
@@ -8,5 +10,6 @@
     "textapp": "Blizina mora, bez gužve, zvukovi i mirisi prirode, šum mora i predivni zalazak.",
     "appartment1": "Apartman 1",
     "appartment2": "Apartman 2",
-    "our": "naš menu"
+    "our": "naš menu",
+    "popust": "10% popust na sve"
 }

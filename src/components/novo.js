@@ -122,7 +122,6 @@ const FormNew = () => {
     <h1 className="text-3xl text-center uppercase">
     <Trans i18nKey="form_title">kontaktirajte nas</Trans>
     </h1>
-    <img src={debela} className="w-80 pb-8 mx-auto" />
     <form
           onSubmit={handleSubmit}
           method="post"
