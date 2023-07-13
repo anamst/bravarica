@@ -23,7 +23,7 @@ import happy3 from '../images/happy3.jpeg';
 const RestoPage = () => {
     return ( 
     <Layout> 
-        <img src={restoran} className="h-screen w-screen" />
+        <img src={restoran} className="lg:h-screen w-screen" />
         <section id="hero" className="px-10 lg:px-20 xl:px-32 py-12 lg:pt-20 2xl:pt-52 text-normal bg-light">
                 <div className="flex flex-col justify-around items-center text-center">
                     <h1 className="text-4xl uppercase font-naslovi pt-20">

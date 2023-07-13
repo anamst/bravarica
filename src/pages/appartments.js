@@ -14,7 +14,7 @@ import debela from '../images/debela.png'
 const AppartmentPage = () => {
     return ( 
         <Layout> 
-        <img src={apartmani} className="h-screen w-screen" />
+        <img src={apartmani} className="lg:h-screen w-screen" />
         <section id="hero" className="px-10 lg:px-20 xl:px-32 pt-20 text-normal bg-light">
                 <div className="flex flex-col justify-around items-center w-full">
                     <h1 className="text-4xl uppercase py-12 font-naslovi">
