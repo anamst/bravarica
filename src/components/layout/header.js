@@ -13,11 +13,12 @@ const Header = () => {
       toggleExpansion(!isExpanded);
     };
   return (
-    <nav className="flex fixed z-10 top-0 w-full items-center justify-between flex-wrap bg-header-light px-10 lg:px-20 xl:px-32 py-4 font-naslovi">
+    <nav className="flex py-0 fixed z-10 top-0 w-full items-center justify-between flex-wrap bg-header-light px-10 lg:px-20 xl:px-32 lg:py-4 font-naslovi">
       <Link to={`/`} className='text-normal lg:text-xl uppercase'>Bravarica</Link> 
-      <div className="block md:hidden z-20">
+      <div className="block md:hidden w-10">
         <button onClick={() => toggleExpansion(!isExpanded)} className="text-normal">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 77 120" className='-mt-12'>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000" viewBox="0 0 77 120" width="52" height="52" className='mt-10'>
+  <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" fill="#000"/>
 
                   {!isExpanded ? (
                     <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
