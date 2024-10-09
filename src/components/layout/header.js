@@ -17,7 +17,7 @@ const Header = () => {
       <Link to={`/`} className='text-normal lg:text-xl uppercase'>Bravarica</Link> 
       <div className="block md:hidden w-10">
         <button onClick={() => toggleExpansion(!isExpanded)} className="text-normal">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#000" viewBox="0 0 77 120" width="52" height="52" className='mt-10'>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 77 120" width="52" height="52" className='mt-10'>
   <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" fill="#000"/>
 
                   {!isExpanded ? (
