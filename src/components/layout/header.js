@@ -3,27 +3,28 @@ import {useState} from 'react'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from 'gatsby';
 import {Link, useI18next} from 'gatsby-plugin-react-i18next';
-import logo from '../../images/logo.png'
 
 
 const Header = () => {
     const {languages, originalPath, i18n} = useI18next();
     const [isExpanded, toggleExpansion] = useState(false)
-
-     
+  
+    const handleButtonClick = () => {
+      toggleExpansion(!isExpanded);
+    };
   return (
     <nav className="flex fixed z-10 top-0 w-full items-center justify-between flex-wrap bg-header-light px-10 lg:px-20 xl:px-32 py-4 font-naslovi">
-      <Link to={`/`}><img src={logo} className="w-48" ></img></Link> 
-      <div className="block md:hidden">
+      <Link to={`/`} className='text-normal lg:text-xl uppercase'>Bravarica</Link> 
+      <div className="block md:hidden z-20">
         <button onClick={() => toggleExpansion(!isExpanded)} className="text-normal">
-            <svg className="w-6 h-6 fill-white" viewBox="0 0 24 24">
-            <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 77 120" className='-mt-12'>
+
                   {!isExpanded ? (
                     <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
                   ) : (
                     <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
                   )}
-                </svg>
+                
             </svg>        
         </button>
       </div>
